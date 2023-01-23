@@ -1,4 +1,5 @@
 import Skills from "./components/skills/Skills";
+import Experiences from "./components/experiences/Experiences";
 
 export default function App() {
     return (
@@ -55,6 +56,7 @@ export default function App() {
                     </p>
                 </section>
                 <Skills/>
+                <Experiences/>
             </main>
             <footer></footer>
         </>

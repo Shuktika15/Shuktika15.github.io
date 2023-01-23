@@ -1,0 +1,13 @@
+#Experiences {
+  display: grid;
+  gap: 1rem;
+
+  .experience {
+    display: grid;
+    gap: 0.5rem;
+
+    h3 {
+      color: var(--accent-color);
+    }
+  }
+}
