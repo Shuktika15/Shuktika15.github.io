@@ -54,22 +54,21 @@ export const Data: DataType = {
     ],
     experiences: [
         {
+            company: 'Applied Reserach Works',
+            startMonth: 'Feb',
+            startYear: 2023,
+            current: true,
+            description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            A architecto ea enim laborum praesentium quasi tempore! 
+                            Ad, alias, animi assumenda cum distinctio eaque eius, 
+                            minima recusandae repellendus sunt temporibus ullam?`
+        }, {
             company: 'Cognizant',
             startMonth: 'Oct',
             startYear: 2020,
             current: false,
             endMonth: 'Feb',
             endYear: 2023,
-            description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            A architecto ea enim laborum praesentium quasi tempore! 
-                            Ad, alias, animi assumenda cum distinctio eaque eius, 
-                            minima recusandae repellendus sunt temporibus ullam?`
-        },
-        {
-            company: 'Applied Reserach Works',
-            startMonth: 'Feb',
-            startYear: 2023,
-            current: true,
             description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                             A architecto ea enim laborum praesentium quasi tempore! 
                             Ad, alias, animi assumenda cum distinctio eaque eius, 

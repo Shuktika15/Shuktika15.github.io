@@ -17,7 +17,7 @@ export default function Experiences() {
                 <>
                     <div className="experience">
                         <h3>{experience.company}</h3>
-                        <p><i>{timeline(experience)}</i></p>
+                        <p><i className="fa-regular fa-calendar"></i> {timeline(experience)}</p>
                         <p className="content">{experience.description}</p>
                     </div>
                     {index != experiences.length - 1 ? <hr/> : <></>}
