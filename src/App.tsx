@@ -1,3 +1,5 @@
+import Skills from "./components/skills/Skills";
+
 export default function App() {
     return (
         <>
@@ -43,7 +45,7 @@ export default function App() {
                         My name is Hevin. I have been studying UI UX Design since October 2020.
                         I like creating a cool design project.
                     </p>
-                    <p>
+                    <p className="content">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         Hic, dolores dolore culpa, illum eos ipsum reiciendis non expedita,
                         perspiciatis nostrum inventore? Labore, architecto.
@@ -52,6 +54,7 @@ export default function App() {
                         impedit fugit perspiciatis laudantium voluptates deleniti eius pariatur?
                     </p>
                 </section>
+                <Skills/>
             </main>
             <footer></footer>
         </>
