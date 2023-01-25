@@ -26,6 +26,7 @@ export interface Experience {
 export type GradeType = 'percentage' | 'cgpa';
 
 export interface Education {
+    id: number,
     institution: string,
     educationType: string,
     grade: number,
@@ -89,6 +90,7 @@ export const Data: DataType = {
     ],
     educations: [
         {
+            id: 1,
             institution: "Government College of Leather Technology",
             educationType: "B. Tech in Information Technology",
             gradeType: "cgpa",
@@ -96,6 +98,7 @@ export const Data: DataType = {
             startYear: 2018,
             endYear: 2020
         }, {
+            id: 2,
             institution: "B.D.M. International",
             educationType: "Higher Secondary",
             gradeType: "percentage",
