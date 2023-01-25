@@ -1,6 +1,7 @@
 export interface DataType {
     skills: Skill[],
     experiences: Experience[],
+    educations: Education[]
 }
 
 export interface Skill {
@@ -20,6 +21,17 @@ export interface Experience {
     endYear?: number,
     endMonth?: Month,
     description: string
+}
+
+export type GradeType = 'percentage' | 'cgpa';
+
+export interface Education {
+    institution: string,
+    educationType: string,
+    grade: number,
+    gradeType: GradeType,
+    startYear: number,
+    endYear: number,
 }
 
 export const Data: DataType = {
@@ -73,6 +85,23 @@ export const Data: DataType = {
                             A architecto ea enim laborum praesentium quasi tempore! 
                             Ad, alias, animi assumenda cum distinctio eaque eius, 
                             minima recusandae repellendus sunt temporibus ullam?`
+        }
+    ],
+    educations: [
+        {
+            institution: "Government College of Leather Technology",
+            educationType: "B. Tech in Information Technology",
+            gradeType: "cgpa",
+            grade: 8.34,
+            startYear: 2018,
+            endYear: 2020
+        }, {
+            institution: "B.D.M. International",
+            educationType: "Higher Secondary",
+            gradeType: "percentage",
+            grade: 89,
+            startYear: 2016,
+            endYear: 2018
         }
     ]
 }
