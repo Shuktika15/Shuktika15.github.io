@@ -14,6 +14,7 @@ export interface Skill {
 export type Month = 'Jan' | 'Feb' | 'Mar' | 'Apr' | 'May' | 'Jun' | 'Jul' | 'Aug' | 'Sep' | 'Oct' | 'Nov' | 'Dec';
 
 export interface Experience {
+    id: number,
     company: string,
     startYear: number,
     startMonth: Month,
@@ -67,6 +68,7 @@ export const Data: DataType = {
     ],
     experiences: [
         {
+            id: 1,
             company: 'Applied Reserach Works',
             startMonth: 'Feb',
             startYear: 2023,
@@ -76,6 +78,7 @@ export const Data: DataType = {
                             Ad, alias, animi assumenda cum distinctio eaque eius, 
                             minima recusandae repellendus sunt temporibus ullam?`
         }, {
+            id: 2,
             company: 'Cognizant',
             startMonth: 'Oct',
             startYear: 2020,
