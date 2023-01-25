@@ -1,5 +1,6 @@
 import Skills from "./components/skills/Skills";
 import Experiences from "./components/experiences/Experiences";
+import Educations from "./components/educations/Educations";
 
 export default function App() {
     return (
@@ -57,6 +58,7 @@ export default function App() {
                 </section>
                 <Skills/>
                 <Experiences/>
+                <Educations/>
             </main>
             <footer></footer>
         </>

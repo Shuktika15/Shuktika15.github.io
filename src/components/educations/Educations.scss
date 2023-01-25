@@ -1,0 +1,22 @@
+#Educations {
+  display: grid;
+  gap: 1rem;
+
+  .education {
+    display: grid;
+    gap: 0.5rem;
+
+    h3 {
+      color: var(--accent-color);
+    }
+
+    .flex {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    hr {
+      margin-top: 0.5rem;
+    }
+  }
+}
