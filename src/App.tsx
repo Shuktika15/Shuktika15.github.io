@@ -22,25 +22,13 @@ export default function App() {
                         </b>
                     </p>
                 </div>
-                <button className="btn">About Me</button>
-                <section className="my-works">
+                <nav>
+                    <button className="btn">About Me</button>
                     <h3>
                         <span>My Works</span>
                         <i className="fa-solid fa-chevron-right"></i>
                     </h3>
-                    <article>
-                        <h4>Born In</h4>
-                        <h2>Norway</h2>
-                    </article>
-                    <article>
-                        <h4>Experience</h4>
-                        <h2>Norway</h2>
-                    </article>
-                    <article>
-                        <h4>Date of Birth</h4>
-                        <h2>15 February, 1998</h2>
-                    </article>
-                </section>
+                </nav>
                 <AboutMe/>
                 <Skills/>
                 <Experiences/>
