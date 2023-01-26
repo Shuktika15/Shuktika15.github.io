@@ -14,12 +14,12 @@ export default function Experiences() {
         <section id="Experiences">
             <h1>Experiences</h1>
             {experiences.map((experience, index) => (
-                <div className="experience" key={experience.id}>
+                <article className="experience" key={experience.id}>
                     <h3>{experience.company}</h3>
                     <p><i className="fa-regular fa-calendar"></i> {timeline(experience)}</p>
                     <p className="content">{experience.description}</p>
                     {index != experiences.length - 1 ? <hr/> : <></>}
-                </div>
+                </article>
             ))}
         </section>
     )

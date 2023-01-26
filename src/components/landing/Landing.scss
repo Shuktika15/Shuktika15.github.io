@@ -1,0 +1,15 @@
+#Landing {
+  .portrait {
+    background-image: url("../../assets/images/me.jpg");
+    background-size: contain;
+    width: 100%;
+    aspect-ratio: 1;
+  }
+
+  .myself {
+    p {
+      padding-top: 1rem;
+      line-height: 1.5rem;
+    }
+  }
+}

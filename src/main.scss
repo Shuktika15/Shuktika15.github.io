@@ -17,46 +17,14 @@ body {
   letter-spacing: 0.5px;
 }
 
-.content {
-  opacity: 0.6;
-}
-
-header {
-  width: 100%;
-  position: fixed;
-  padding: 1rem 2rem;
-  background-color: var(--primary-color);
-  z-index: 1;
-  box-shadow: 0 0 0.5rem 0.25rem rgba(0, 0, 0, 0.1);
-
-  h1 {
-    font-family: 'Mulish', sans-serif;
-
-    span {
-      color: var(--accent-color);
-    }
-  }
-}
-
 main {
   padding: 2rem;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 2rem;
 }
 
-.portrait {
-  background-image: url("./assets/images/me.jpg");
-  background-size: contain;
-  width: 100%;
-  aspect-ratio: 1;
-}
-
-.myself {
-  p {
-    padding-top: 1rem;
-    line-height: 1.5rem;
-  }
+.content {
+  opacity: 0.6;
 }
 
 .btn {

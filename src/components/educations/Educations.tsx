@@ -21,7 +21,7 @@ export default function Educations() {
         <section id="Educations">
             <h1>Educations</h1>
             {educations.map((education, index) => (
-                <div className="education" key={education.id}>
+                <article className="education" key={education.id}>
                     <h3>{education.institution}</h3>
                     <p>{education.educationType}</p>
                     <div className="flex">
@@ -29,7 +29,7 @@ export default function Educations() {
                         <span className="content">{timeline(education)}</span>
                     </div>
                     {index != educations.length - 1 ? <hr/> : <></>}
-                </div>
+                </article>
             ))}
         </section>
     )
