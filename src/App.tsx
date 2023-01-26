@@ -1,6 +1,7 @@
 import Skills from "./components/skills/Skills";
 import Experiences from "./components/experiences/Experiences";
 import Educations from "./components/educations/Educations";
+import AboutMe from "./components/about-me/AboutMe";
 
 export default function App() {
     return (
@@ -40,22 +41,7 @@ export default function App() {
                         <h2>15 February, 1998</h2>
                     </article>
                 </section>
-                <section className="about-me">
-                    <h1>About Me</h1>
-                    <h3>I am a Web Developer</h3>
-                    <p>
-                        My name is Hevin. I have been studying UI UX Design since October 2020.
-                        I like creating a cool design project.
-                    </p>
-                    <p className="content">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Hic, dolores dolore culpa, illum eos ipsum reiciendis non expedita,
-                        perspiciatis nostrum inventore? Labore, architecto.
-                        Molestias sunt quidem hic commodi, quas reprehenderit accusamus natus modi
-                        consectetur et quae quod explicabo iusto alias obcaecati aliquam
-                        impedit fugit perspiciatis laudantium voluptates deleniti eius pariatur?
-                    </p>
-                </section>
+                <AboutMe/>
                 <Skills/>
                 <Experiences/>
                 <Educations/>
