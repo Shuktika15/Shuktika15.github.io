@@ -89,14 +89,3 @@ main {
     }
   }
 }
-
-.about-me {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-
-  h3 {
-    color: var(--accent-color);
-    text-transform: uppercase;
-  }
-}

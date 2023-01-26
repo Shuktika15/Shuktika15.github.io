@@ -2,7 +2,7 @@ import "./AboutMe.scss";
 
 export default function AboutMe() {
     return (
-        <section className="about-me">
+        <section id="about-me">
             <h1>About Me</h1>
             <h3>I am a Web Developer</h3>
             <p>
