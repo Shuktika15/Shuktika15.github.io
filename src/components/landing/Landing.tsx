@@ -11,8 +11,11 @@ export default function Landing() {
         <section id="Landing">
             <div className="portrait"></div>
             <div className="myself">
-                <h1>Hey I'm</h1>
-                <h1>Shuktika</h1>
+                <h1>
+                    Hey I'm
+                    <br/>
+                    Shuktika Mahanty
+                </h1>
                 <p>
                     <b>
                         I’m a Web developer & I’m very passionate and dedicated to my work.
