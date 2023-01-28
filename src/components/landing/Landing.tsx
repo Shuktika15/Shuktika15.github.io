@@ -24,22 +24,22 @@ export default function Landing() {
                     </b>
                 </p>
                 <div className="socials">
-                    <a href="https://github.com/Shuktika15">
+                    <a href="https://github.com/Shuktika15" aria-label="GitHub">
                         <img src={github} alt="GitHub"/>
                     </a>
-                    <a href="https://in.linkedin.com/in/shuktika-mahanty">
+                    <a href="https://in.linkedin.com/in/shuktika-mahanty" aria-label="LinkedIn">
                         <img src={linkedin} alt="LinkedIn"/>
                     </a>
-                    <a href="https://www.facebook.com/ShuktikaMahanty">
+                    <a href="https://www.facebook.com/ShuktikaMahanty" aria-label="Facebook">
                         <img src={facebook} alt="Facebook"/>
                     </a>
-                    <a href="https://www.instagram.com/shuktikamahanty">
+                    <a href="https://www.instagram.com/shuktikamahanty" aria-label="Instagram">
                         <img src={instagram} alt="Instagram"/>
                     </a>
-                    <a href="https://pinterest.com/shuktikam">
+                    <a href="https://pinterest.com/shuktikam" aria-label="Pinterest">
                         <img src={pinterest} alt="Pinterest"/>
                     </a>
-                    <a href="https://leetcode.com/shukti">
+                    <a href="https://leetcode.com/shukti" aria-label="LeetCode">
                         <img src={leetcode} alt="LeetCode"/>
                     </a>
                 </div>
