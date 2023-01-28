@@ -16,9 +16,32 @@
   }
 
   .myself {
+    display: grid;
+    gap: 0.75rem;
+
     p {
       padding-top: 1rem;
       line-height: 1.5rem;
+    }
+
+    .socials {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+
+      a {
+        display: grid;
+        place-items: center;
+        text-decoration: none;
+        height: 2.5rem;
+        width: 2.5rem;
+        background: var(--light-color);
+        border-radius: 50%;
+
+        img {
+          height: 1.5rem;
+        }
+      }
     }
   }
 }
