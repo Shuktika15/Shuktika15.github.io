@@ -17,7 +17,9 @@ export default function Experiences() {
                 <article className="experience" key={experience.id}>
                     <h3>{experience.company}</h3>
                     <p><i className="fa-regular fa-calendar"></i> {timeline(experience)}</p>
-                    <p className="content">{experience.description}</p>
+                    {experience.descriptions.map((description) => (
+                        <p className="content" key={description}>{description}</p>
+                    ))}
                     {index != experiences.length - 1 ? <hr/> : <></>}
                 </article>
             ))}

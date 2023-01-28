@@ -11,7 +11,9 @@ export default function Skills() {
                 <article className="skill" key={skill.id}>
                     <div className="logo"></div>
                     <h3>{skill.title}</h3>
-                    <div className="content">{skill.description}</div>
+                    {skill.descriptions.map((description) => (
+                        <div className="content" key={description}>{description}</div>
+                    ))}
                 </article>
             ))}
         </section>

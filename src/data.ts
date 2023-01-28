@@ -8,7 +8,7 @@ export interface Skill {
     id: number,
     logo: string,
     title: string,
-    description: string
+    descriptions: string[]
 }
 
 export type Month = 'Jan' | 'Feb' | 'Mar' | 'Apr' | 'May' | 'Jun' | 'Jul' | 'Aug' | 'Sep' | 'Oct' | 'Nov' | 'Dec';
@@ -21,7 +21,7 @@ export interface Experience {
     current: boolean,
     endYear?: number,
     endMonth?: Month,
-    description: string
+    descriptions: string[]
 }
 
 export type GradeType = 'percentage' | 'cgpa';
@@ -42,28 +42,34 @@ export const Data: DataType = {
             id: 1,
             logo: 'java',
             title: 'Java',
-            description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            A architecto ea enim laborum praesentium quasi tempore! 
-                            Ad, alias, animi assumenda cum distinctio eaque eius, 
-                            minima recusandae repellendus sunt temporibus ullam?`
+            descriptions: [
+                `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                A architecto ea enim laborum praesentium quasi tempore! 
+                Ad, alias, animi assumenda cum distinctio eaque eius, 
+                minima recusandae repellendus sunt temporibus ullam?`
+            ]
         },
         {
             id: 2,
             logo: 'spring-boot',
             title: 'Spring Boot',
-            description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            A architecto ea enim laborum praesentium quasi tempore! 
-                            Ad, alias, animi assumenda cum distinctio eaque eius, 
-                            minima recusandae repellendus sunt temporibus ullam?`
+            descriptions: [
+                `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                A architecto ea enim laborum praesentium quasi tempore! 
+                Ad, alias, animi assumenda cum distinctio eaque eius, 
+                minima recusandae repellendus sunt temporibus ullam?`
+            ]
         },
         {
             id: 3,
             logo: 'mysql',
             title: 'MySQL',
-            description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            A architecto ea enim laborum praesentium quasi tempore! 
-                            Ad, alias, animi assumenda cum distinctio eaque eius, 
-                            minima recusandae repellendus sunt temporibus ullam?`
+            descriptions: [
+                `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                A architecto ea enim laborum praesentium quasi tempore! 
+                Ad, alias, animi assumenda cum distinctio eaque eius, 
+                minima recusandae repellendus sunt temporibus ullam?`
+            ]
         }
     ],
     experiences: [
@@ -73,10 +79,16 @@ export const Data: DataType = {
             startMonth: 'Feb',
             startYear: 2023,
             current: true,
-            description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            A architecto ea enim laborum praesentium quasi tempore! 
-                            Ad, alias, animi assumenda cum distinctio eaque eius, 
-                            minima recusandae repellendus sunt temporibus ullam?`
+            descriptions: [
+                `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                A architecto ea enim laborum praesentium quasi tempore! 
+                Ad, alias, animi assumenda cum distinctio eaque eius, 
+                minima recusandae repellendus sunt temporibus ullam?`,
+                `mollitia, nulla perferendis quasi quibusdam rerum sit 
+                vel veniam voluptatibus voluptatum! Blanditiis dignissimos 
+                ducimus exercitationem impedit incidunt non perspiciatis 
+                similique tenetur! Ducimus, voluptates!`
+            ]
         }, {
             id: 2,
             company: 'Cognizant',
@@ -85,10 +97,12 @@ export const Data: DataType = {
             current: false,
             endMonth: 'Feb',
             endYear: 2023,
-            description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            A architecto ea enim laborum praesentium quasi tempore! 
-                            Ad, alias, animi assumenda cum distinctio eaque eius, 
-                            minima recusandae repellendus sunt temporibus ullam?`
+            descriptions: [
+                `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                A architecto ea enim laborum praesentium quasi tempore! 
+                Ad, alias, animi assumenda cum distinctio eaque eius, 
+                minima recusandae repellendus sunt temporibus ullam?`
+            ]
         }
     ],
     educations: [
