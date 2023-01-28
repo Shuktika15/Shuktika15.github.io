@@ -1,7 +1,8 @@
 export interface DataType {
     skills: Skill[],
     experiences: Experience[],
-    educations: Education[]
+    educations: Education[],
+    projects: Project[]
 }
 
 export interface Skill {
@@ -34,6 +35,15 @@ export interface Education {
     gradeType: GradeType,
     startYear: number,
     endYear: number,
+}
+
+export interface Project {
+    id: number,
+    title: string,
+    background: string,
+    github: string,
+    descriptions: string[],
+    stack: string[]
 }
 
 export const Data: DataType = {
@@ -122,6 +132,34 @@ export const Data: DataType = {
             grade: 89,
             startYear: 2016,
             endYear: 2018
+        }
+    ],
+    projects: [
+        {
+            id: 1,
+            title: 'Pension Management System',
+            background: 'project.jpg',
+            github: 'https://github.com/Shuktika15/pension-management',
+            descriptions: [
+                `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                A architecto ea enim laborum praesentium quasi tempore! 
+                Ad, alias, animi assumenda cum distinctio eaque eius, 
+                minima recusandae repellendus sunt temporibus ullam?`
+            ],
+            stack: ['Java', 'Spring Boot', 'Angular', 'MySQL', 'Docker', 'AWS'],
+        },
+        {
+            id: 2,
+            title: 'Airline Management System',
+            background: 'project.jpg',
+            github: 'https://github.com/Shuktika15/airline_ticket_reservation_system',
+            descriptions: [
+                `Lorem ipsum dolor sit amet, consectetur adipisicige elit.
+                A architecto ea enim laborum praesentium quasi tempore! 
+                Ad, alias, animi assumenda cum distinctio eaque eius, 
+                minima recusandae repellendus sunt temporibus ullamn?`
+            ],
+            stack: ['Java', 'Spring Boot', 'JSP', 'MySQL'],
         }
     ]
 }
