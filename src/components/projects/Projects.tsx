@@ -1,29 +1,27 @@
 import "./Projects.scss";
+import {Data, Project} from "../../data";
 
 export default function Projects() {
+    const projects: Project[] = Data.projects;
+
     return (
         <section id="Projects">
             <h1>Projects</h1>
-            <article className="card">
-                <div className="card-header"></div>
-                <div className="card-body">
-                    <h3 className="color-accent">Pension Management System</h3>
-                    <p className="content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos fuga fugit maiores
-                        mollitia neque nostrum praesentium quisquam quo sequi voluptatem.
-                    </p>
-                </div>
-            </article>
-            <article className="card">
-                <div className="card-header"></div>
-                <div className="card-body">
-                    <h3 className="color-accent">Airline Management System</h3>
-                    <p className="content">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos fuga fugit maiores
-                        mollitia neque nostrum praesentium quisquam quo sequi voluptatem.
-                    </p>
-                </div>
-            </article>
+            {projects.map((project) => (
+                <article className="card" key={project.id}>
+                    <div className="card-header">
+                        <a href={project.github}>
+                            <i className="fa-brands fa-github" aria-label="GitHub Link"></i>
+                        </a>
+                    </div>
+                    <div className="card-body">
+                        <h3 className="color-accent">{project.title}</h3>
+                        {project.descriptions.map((description) => (
+                            <p className="content" key={description}>{description}</p>
+                        ))}
+                    </div>
+                </article>
+            ))}
         </section>
     );
 }
