@@ -19,6 +19,11 @@ export default function Projects() {
                         {project.descriptions.map((description) => (
                             <p className="content" key={description}>{description}</p>
                         ))}
+                        <div className="stack">
+                            {project.stack.map((item) => (
+                                <div className="chip" key={item}>{item}</div>
+                            ))}
+                        </div>
                     </div>
                 </article>
             ))}
