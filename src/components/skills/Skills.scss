@@ -1,6 +1,5 @@
 #Skills {
   .skill {
-    display: grid;
     grid-template-columns: 3rem auto;
     align-items: center;
     grid-row-gap: 0.5rem;
@@ -22,7 +21,7 @@
   }
 }
 
-@media screen and (min-width: 64rem) and (max-width: 75rem) {
+@media screen and (min-width: 64rem) {
   #Skills {
     grid-template-columns: repeat(3, 1fr);
 

@@ -1,8 +1,5 @@
 #Hobbies {
   .hobby {
-    display: grid;
-    gap: 0.75rem;
-
     .collage {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -90,7 +87,7 @@
   }
 }
 
-@media screen and (min-width: 64rem) and (max-width: 75rem) {
+@media screen and (min-width: 64rem) {
   #Hobbies {
     grid-template-columns: repeat(2, 1fr);
     align-items: start;

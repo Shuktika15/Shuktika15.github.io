@@ -49,6 +49,11 @@ section {
   gap: 1rem;
 }
 
+article {
+  display: grid;
+  gap: 0.75rem;
+}
+
 .bg-light {
   background-color: var(--light-color);
 }
@@ -73,6 +78,24 @@ section {
   .container {
     max-width: 30rem;
   }
+
+  main {
+    gap: 2.25rem;
+  }
+}
+
+@media screen and (min-width: 45rem) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+  }
 }
 
 @media screen and (min-width: 45rem) and (max-width: 64rem) {
@@ -81,37 +104,12 @@ section {
     max-width: 45rem;
   }
 
-  h1 {
-    font-size: 2rem;
-  }
-
-  h3 {
-    font-size: 1.5rem;
-  }
-
-  p {
-    font-size: 1.25rem;
+  main {
+    gap: 2.5rem;
   }
 }
 
-@media screen and (min-width: 64rem) and (max-width: 75rem) {
-  .container {
-    padding: 0 3rem;
-    max-width: 64rem;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  h3 {
-    font-size: 1.5rem;
-  }
-
-  p {
-    font-size: 1.25rem;
-  }
-
+@media screen and (min-width: 64rem) {
   main {
     grid-template-columns: repeat(2, 1fr);
     align-items: start;
@@ -122,6 +120,40 @@ section {
   }
 }
 
-@media screen and (min-width: 75rem) {
+@media screen and (min-width: 64rem) and (max-width: 75rem) {
+  .container {
+    padding: 0 3rem;
+    max-width: 64rem;
+  }
 
+  main {
+    gap: 2.75rem;
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  .container {
+    padding: 0 4rem;
+    max-width: 75rem;
+  }
+
+  main {
+    gap: 3rem;
+  }
+
+  section {
+    gap: 1.5rem;
+  }
+
+  article {
+    gap: 1rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
 }

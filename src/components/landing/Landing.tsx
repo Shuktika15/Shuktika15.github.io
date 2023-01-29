@@ -17,11 +17,9 @@ export default function Landing() {
                     Shuktika Mahanty
                 </h1>
                 <p>
-                    <b>
-                        I’m a Web developer & I’m very passionate and dedicated to my work.
-                        I have acquired the skills and knowledge necessary to make your project
-                        a success.
-                    </b>
+                    I’m a Web developer & I’m very passionate and dedicated to my work.
+                    I have acquired the skills and knowledge necessary to make your project
+                    a success.
                 </p>
                 <div className="socials">
                     <a href="https://github.com/Shuktika15" aria-label="GitHub">
