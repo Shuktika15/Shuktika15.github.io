@@ -12,7 +12,7 @@ export default function Skills() {
                     <div className="logo"></div>
                     <h3>{skill.title}</h3>
                     {skill.descriptions.map((description) => (
-                        <div className="content" key={description}>{description}</div>
+                        <p className="content" key={description}>{description}</p>
                     ))}
                 </article>
             ))}

@@ -36,3 +36,13 @@
     }
   }
 }
+
+@media screen and (min-width: 64rem) and (max-width: 75rem) {
+  #Projects {
+    grid-template-columns: repeat(2, 1fr);
+
+    h1 {
+      grid-column: 1 / -1;
+    }
+  }
+}

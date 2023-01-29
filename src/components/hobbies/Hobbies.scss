@@ -89,3 +89,14 @@
     }
   }
 }
+
+@media screen and (min-width: 64rem) and (max-width: 75rem) {
+  #Hobbies {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+
+    h1 {
+      grid-column: 1 / -1;
+    }
+  }
+}

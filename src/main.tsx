@@ -14,15 +14,17 @@ function App() {
     return (
         <>
             <Header/>
-            <main>
-                <Landing/>
-                <AboutMe/>
-                <Skills/>
-                <Experiences/>
-                <Educations/>
-                <Projects/>
-                <Hobbies/>
-            </main>
+            <div className="container">
+                <main>
+                    <Landing/>
+                    <AboutMe/>
+                    <Skills/>
+                    <Experiences/>
+                    <Educations/>
+                    <Projects/>
+                    <Hobbies/>
+                </main>
+            </div>
             <footer></footer>
         </>
     )
