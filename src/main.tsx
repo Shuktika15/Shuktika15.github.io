@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import './main.scss'
+import './styles/main.scss'
 import Header from "./components/header/Header";
 import Landing from "./components/landing/Landing";
 import AboutMe from "./components/about-me/AboutMe";

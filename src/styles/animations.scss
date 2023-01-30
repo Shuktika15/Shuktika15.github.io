@@ -1,0 +1,62 @@
+.fade-in {
+  opacity: 0;
+  animation: fade-in 1s ease-in forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.slide-in {
+  left: -100vw;
+  position: relative;
+  animation: slide-in 1s ease-out forwards;
+}
+
+@keyframes slide-in {
+  from {
+    left: -100vw;
+  }
+
+  to {
+    left: 0;
+  }
+}
+
+.expand {
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  animation: expand 1s ease-out forwards;
+}
+
+@keyframes expand {
+  from {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .fade-in {
+    opacity: initial;
+    animation: none;
+  }
+
+  .slide-in-fade-in {
+    left: initial;
+    animation: none;
+  }
+
+  .expand {
+    animation: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
