@@ -16,7 +16,7 @@ export default function Landing() {
                     <br/>
                     Shuktika Mahanty
                 </h1>
-                <p className="expand-vertical" style={{animationDelay: '2s'}}>
+                <p className="reveal-vertical" style={{animationDelay: '2s'}}>
                     I’m a Web developer & I’m very passionate and dedicated to my work.
                     I have acquired the skills and knowledge necessary to make your project
                     a success.
@@ -71,10 +71,13 @@ export default function Landing() {
                         <img src={leetcode} alt="LeetCode"/>
                     </a>
                 </div>
-                <div className="download-resume">
-                    <p className="color-accent">Download Resume</p>
-                    <i className="fa-solid fa-chevron-right color-accent"></i>
-                </div>
+                <a href="#" className="download-resume color-accent">
+                    <p>Download Resume</p>
+                    <i
+                        className="fa-solid fa-angle-right fade-in"
+                        style={{animationDelay: '6s', animationDuration: '500ms'}}
+                    ></i>
+                </a>
             </div>
         </section>
     )

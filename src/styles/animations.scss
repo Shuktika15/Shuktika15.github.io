@@ -29,12 +29,12 @@
   }
 }
 
-.expand-vertical {
+.reveal-vertical {
   clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-  animation: expand-vertical 1s ease-out forwards;
+  animation: reveal-vertical 1s ease-out forwards;
 }
 
-@keyframes expand-vertical {
+@keyframes reveal-vertical {
   from {
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }
@@ -44,12 +44,12 @@
   }
 }
 
-.expand-horizontal {
+.reveal-horizontal {
   clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-  animation: expand-horizontal 1s ease-out forwards;
+  animation: reveal-horizontal 1s ease-out forwards;
 }
 
-@keyframes expand-horizontal {
+@keyframes reveal-horizontal {
   from {
     clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
   }
@@ -70,12 +70,12 @@
     animation: none;
   }
 
-  .expand-vertical {
+  .reveal-vertical {
     animation: noe;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 
-  .expand-horizontal {
+  .reveal-horizontal {
     animation: none;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }

@@ -49,14 +49,35 @@
       display: flex;
       gap: 0.25rem;
       align-items: center;
+      padding: 0.25rem 0;
+      text-decoration: none;
 
       p {
         text-transform: uppercase;
+        width: 0;
+        overflow-x: hidden;
+        white-space: nowrap;
+        line-height: initial;
+        animation: expand-horizontal 500ms 6.5s ease-out forwards;
+      }
+
+      @keyframes expand-horizontal {
+        from {
+          width: 0;
+        }
+
+        to {
+          width: 18ch;
+        }
+      }
+
+      @media (prefers-reduced-motion) {
+        animation: none;
       }
 
       i {
-        display: grid;
-        place-items: center;
+        line-height: initial;
+        margin-top: 2px;
       }
     }
   }
@@ -81,7 +102,7 @@
         font-size: 2.5rem;
       }
 
-      p {
+      p, i {
         line-height: 1.75rem;
       }
     }
@@ -97,9 +118,11 @@
         font-size: 3rem;
       }
 
-      p {
+      p, i {
         font-size: 1.5rem;
         line-height: 2rem;
+        display: grid;
+        place-items: center;
       }
 
       .socials {
