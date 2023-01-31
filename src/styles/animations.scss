@@ -29,14 +29,29 @@
   }
 }
 
-.expand {
+.expand-vertical {
   clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-  animation: expand 1s ease-out forwards;
+  animation: expand-vertical 1s ease-out forwards;
 }
 
-@keyframes expand {
+@keyframes expand-vertical {
   from {
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+.expand-horizontal {
+  clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  animation: expand-horizontal 1s ease-out forwards;
+}
+
+@keyframes expand-horizontal {
+  from {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
   }
 
   to {
@@ -55,8 +70,13 @@
     animation: none;
   }
 
-  .expand {
-    animation: 0;
+  .expand-vertical {
+    animation: noe;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .expand-horizontal {
+    animation: none;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
 }

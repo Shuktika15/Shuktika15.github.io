@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
 
   .portrait {
     background-image: url("../../assets/images/me.jpg");
@@ -14,7 +14,7 @@
     background-position: center;
     width: 100%;
     aspect-ratio: 1;
-    max-height: 25rem;
+    max-height: 20rem;
   }
 
   .myself {
@@ -42,6 +42,21 @@
         img {
           height: 2.5rem;
         }
+      }
+    }
+
+    .download-resume {
+      display: flex;
+      gap: 0.25rem;
+      align-items: center;
+
+      p {
+        text-transform: uppercase;
+      }
+
+      i {
+        display: grid;
+        place-items: center;
       }
     }
   }
