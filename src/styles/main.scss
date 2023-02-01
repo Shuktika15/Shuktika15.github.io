@@ -77,6 +77,23 @@ article {
   border-radius: 0 0 1rem 1rem;
 }
 
+.transition {
+  transition: 500ms ease-out;
+}
+
+.relative {
+  inset: 0;
+  position: relative;
+}
+
+.has-top {
+  top: 1rem;
+}
+
+.no-top {
+  top: 0 !important;
+}
+
 @media screen and (min-width: 30rem) and (max-width: 45rem) {
   .container {
     max-width: 30rem;
@@ -112,6 +129,12 @@ article {
   }
 }
 
+@media screen and (max-width: 64rem) {
+  .transition {
+    animation-delay: 0s !important;
+  }
+}
+
 @media screen and (min-width: 64rem) {
   main {
     grid-template-columns: repeat(2, 1fr);
@@ -120,6 +143,10 @@ article {
 
   #Landing, #AboutMe, #Skills, #Projects, #Hobbies {
     grid-column: 1 / -1;
+  }
+
+  .has-top {
+    top: 2rem;
   }
 }
 

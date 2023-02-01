@@ -8,7 +8,7 @@ export default function Projects() {
         <section id="Projects">
             <h1>Projects</h1>
             {projects.map((project) => (
-                <article className="card" key={project.id}>
+                <article className="project card relative transition has-top" key={project.id}>
                     <div className="card-header">
                         <a href={project.github}>
                             <i className="fa-brands fa-github" aria-label="GitHub Link"></i>
