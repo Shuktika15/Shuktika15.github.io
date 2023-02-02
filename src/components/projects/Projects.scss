@@ -25,7 +25,7 @@
     }
   }
 
-  .card-footer {
+  .card-body {
     .stack {
       display: flex;
       flex-wrap: wrap;
@@ -43,10 +43,26 @@
 
 @media screen and (min-width: 64rem) {
   #Projects {
-    grid-template-columns: repeat(2, 1fr);
-
     h1 {
       grid-column: 1 / -1;
     }
+
+    .card {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 1rem;
+
+      .card-header {
+        border-radius: 1rem;
+      }
+
+      .card-body {
+        height: min-content;
+        padding: 0 1.5rem;
+      }
+    }
   }
+}
+
+@media screen and (min-width: 75rem) {
+
 }

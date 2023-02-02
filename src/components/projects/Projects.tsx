@@ -19,8 +19,6 @@ export default function Projects() {
                         {project.descriptions.map((description) => (
                             <p className="content" key={description}>{description}</p>
                         ))}
-                    </div>
-                    <div className="card-footer">
                         <div className="stack">
                             {project.stack.map((item) => (
                                 <div className="chip" key={item}>{item}</div>
