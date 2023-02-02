@@ -1,9 +1,9 @@
-import github from "../../assets/icons/github.svg";
-import linkedin from "../../assets/icons/linkedin.svg";
-import facebook from "../../assets/icons/facebook.svg";
-import instagram from "../../assets/icons/instagram.svg";
-import pinterest from "../../assets/icons/pinterest.svg";
-import leetcode from "../../assets/icons/leetcode.svg";
+import github from "../../../public/icons/github.svg";
+import linkedin from "../../../public/icons/linkedin.svg";
+import facebook from "../../../public/icons/facebook.svg";
+import instagram from "../../../public/icons/instagram.svg";
+import pinterest from "../../../public/icons/pinterest.svg";
+import leetcode from "../../../public/icons/leetcode.svg";
 import "./Landing.scss";
 
 export default function Landing() {
