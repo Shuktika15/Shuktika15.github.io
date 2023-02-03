@@ -5,7 +5,7 @@ export default function Skills() {
     const skills: Skill[] = Data.skills;
 
     function getLightImage(logoName: string): string {
-        return new URL(`/public/icons/${logoName}-light.svg`, import.meta.url).href;
+        return new URL(`/public/icons/skills/${logoName}-light.svg`, import.meta.url).href;
     }
 
     return (
