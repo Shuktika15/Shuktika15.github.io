@@ -1,6 +1,14 @@
 import "./Hobbies.scss";
 
 export default function Hobbies() {
+    type ImageProp = {name: string}
+    const CSSArt = (props: ImageProp) => {
+        return <img loading="lazy" src={`/images/css-arts/${props.name}.jpg`} alt={props.name}/>
+    }
+    const DigitalPainting = (props: ImageProp) => {
+        return <img loading="lazy" src={`/images/digital-paintings/${props.name}.jpg`} alt={props.name}/>
+    }
+
     return (
         <section id="Hobbies">
             <h1>Hobbies</h1>
@@ -12,10 +20,10 @@ export default function Hobbies() {
                     perferendis quae qui quia quibusdam, quo quod recusandae repudiandae sed sint temporibus.
                 </p>
                 <div className="collage css-arts">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    <div><CSSArt name="3"/></div>
+                    <div><CSSArt name="2"/></div>
+                    <div><CSSArt name="4"/></div>
+                    <div><CSSArt name="1"/></div>
                 </div>
             </article>
             <article className="hobby">
@@ -26,15 +34,15 @@ export default function Hobbies() {
                     perferendis quae qui quia quibusdam, quo quod recusandae repudiandae sed sint temporibus.
                 </p>
                 <div className="collage digital-paintings">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    <div><DigitalPainting name="3"/></div>
+                    <div><DigitalPainting name="5"/></div>
+                    <div><DigitalPainting name="13"/></div>
+                    <div><DigitalPainting name="11"/></div>
+                    <div><DigitalPainting name="6"/></div>
+                    <div><DigitalPainting name="12"/></div>
+                    <div><DigitalPainting name="14"/></div>
+                    <div><DigitalPainting name="15"/></div>
+                    <div><DigitalPainting name="4"/></div>
                 </div>
             </article>
         </section>
