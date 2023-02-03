@@ -4,15 +4,21 @@ import {Data, Project} from "../../data";
 export default function Projects() {
     const projects: Project[] = Data.projects;
 
+    function getImage(projectName: string): string {
+        return new URL(`/public/images/projects/${projectName}`, import.meta.url).href;
+    }
+
     return (
         <section id="Projects">
             <h1>Projects</h1>
             {projects.map((project) => (
                 <article className="project card relative transition has-top" key={project.id}>
                     <div className="card-header">
+                        <img loading="lazy" src={getImage(project.background)} alt={project.title}/>
                         <a href={project.github}>
                             <i className="fa-brands fa-github" aria-label="GitHub Link"></i>
                         </a>
+                        <img src={project.background} alt=""/>
                     </div>
                     <div className="card-body">
                         <h3 className="color-accent">{project.title}</h3>

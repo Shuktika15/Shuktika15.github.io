@@ -5,11 +5,12 @@
 
   .card-header {
     aspect-ratio: 16 / 9;
-    background-image: url("../../../public/images/projects/project.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
     border-radius: 1rem 1rem 0 0;
     position: relative;
+
+    img {
+      border-radius: 1rem 1rem 0 0;
+    }
 
     i {
       color: var(--secondar-color);
@@ -53,6 +54,10 @@
 
       .card-header {
         border-radius: 1rem;
+
+        img {
+          border-radius: 1rem;
+        }
       }
 
       .card-body {
