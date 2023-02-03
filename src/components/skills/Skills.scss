@@ -9,10 +9,13 @@
     border-radius: 1rem;
 
     .logo {
-      background-image: url('../../../public/icons/spring-boot.svg');
-      background-repeat: no-repeat;
-      background-size: contain;
-      aspect-ratio: 1;
+      width: 3rem;
+      height: 3rem;
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
     }
 
     .content {
