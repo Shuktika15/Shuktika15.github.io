@@ -14,7 +14,7 @@ export default function Skills() {
             {skills.map((skill) => (
                 <article className="skill relative transition has-top" key={skill.id}>
                     <div className="logo">
-                        <img src={getLightImage(skill.logo)} alt={skill.logo}/>
+                        <img loading="lazy" src={getLightImage(skill.logo)} alt={skill.logo}/>
                     </div>
                     <h3>{skill.title}</h3>
                     {skill.descriptions.map((description) => (
