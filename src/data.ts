@@ -5,6 +5,9 @@ export interface DataType {
     projects: Project[]
 }
 
+/**
+ * Download logos from {@link [skill-icons](https://github.com/tandpfun/skill-icons)}
+ */
 export interface Skill {
     id: number,
     logo: string,
