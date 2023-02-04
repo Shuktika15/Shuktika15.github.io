@@ -8,7 +8,7 @@ export default function Skills() {
         <section id="Skills">
             <h1>Skills</h1>
             {skills.map((skill) => (
-                <article className="skill relative transition has-top" key={skill.id}>
+                <article className="skill relative transition no-slide" key={skill.id}>
                     <div className="logo">
                         <img loading="lazy" src={`/icons/skills/${skill.logo}-light.svg`} alt={skill.logo}/>
                     </div>

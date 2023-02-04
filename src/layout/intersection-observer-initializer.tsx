@@ -2,7 +2,7 @@ import {useEffect} from "react";
 
 export default function IntersectionObserverInitializer() {
     const intersectionOptions: IntersectionObserverInit = {
-        threshold: 0.5
+        threshold: 0.1
     };
 
     function executor(elements: NodeListOf<HTMLElement>, callback: (element: HTMLElement, index: number) => void) {
@@ -17,7 +17,7 @@ export default function IntersectionObserverInitializer() {
         const projects = document.querySelectorAll<HTMLElement>(".project");
         const observer = new IntersectionObserver((entries) => {
             for (const entry of entries) {
-                entry.target.classList.toggle("no-top", entry.isIntersecting);
+                entry.target.classList.toggle("slide", entry.isIntersecting);
 
                 if (entry.isIntersecting) {
                     observer.unobserve(entry.target);
