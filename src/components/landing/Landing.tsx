@@ -1,9 +1,3 @@
-import github from "../../../public/icons/github.svg";
-import linkedin from "../../../public/icons/linkedin.svg";
-import facebook from "../../../public/icons/facebook.svg";
-import instagram from "../../../public/icons/instagram.svg";
-import pinterest from "../../../public/icons/pinterest.svg";
-import leetcode from "../../../public/icons/leetcode.svg";
 import "./Landing.scss";
 
 export default function Landing() {
@@ -28,7 +22,7 @@ export default function Landing() {
                         className="fade-in"
                         style={{animationDelay: '3s', animationDuration: '500ms'}}
                     >
-                        <img src={github} alt="GitHub"/>
+                        <img src="/icons/github.svg" alt="GitHub"/>
                     </a>
                     <a
                         href="https://in.linkedin.com/in/shuktika-mahanty"
@@ -36,7 +30,7 @@ export default function Landing() {
                         className="fade-in"
                         style={{animationDelay: '3.5s', animationDuration: '500ms'}}
                     >
-                        <img src={linkedin} alt="LinkedIn"/>
+                        <img src="/icons/linkedin.svg" alt="LinkedIn"/>
                     </a>
                     <a
                         href="https://www.facebook.com/ShuktikaMahanty"
@@ -44,7 +38,7 @@ export default function Landing() {
                         className="fade-in"
                         style={{animationDelay: '4s', animationDuration: '500ms'}}
                     >
-                        <img src={facebook} alt="Facebook"/>
+                        <img src="/icons/facebook.svg" alt="Facebook"/>
                     </a>
                     <a
                         href="https://www.instagram.com/shuktikamahanty"
@@ -52,7 +46,7 @@ export default function Landing() {
                         className="fade-in"
                         style={{animationDelay: '4.5s', animationDuration: '500ms'}}
                     >
-                        <img src={instagram} alt="Instagram"/>
+                        <img src="/icons/instagram.svg" alt="Instagram"/>
                     </a>
                     <a
                         href="https://pinterest.com/shuktikam"
@@ -60,7 +54,7 @@ export default function Landing() {
                         className="fade-in"
                         style={{animationDelay: '5s', animationDuration: '500ms'}}
                     >
-                        <img src={pinterest} alt="Pinterest"/>
+                        <img src="/icons/pinterest.svg" alt="Pinterest"/>
                     </a>
                     <a
                         href="https://leetcode.com/shukti"
@@ -68,7 +62,7 @@ export default function Landing() {
                         className="fade-in"
                         style={{animationDelay: '5.5s', animationDuration: '500ms'}}
                     >
-                        <img src={leetcode} alt="LeetCode"/>
+                        <img src="/icons/leetcode.svg" alt="LeetCode"/>
                     </a>
                 </div>
                 <a href="#" className="download-resume color-accent">
