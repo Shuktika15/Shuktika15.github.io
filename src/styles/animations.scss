@@ -59,6 +59,22 @@
   }
 }
 
+.rotate-y {
+  transform-origin: top;
+  transform: perspective(1000px) rotateX(-90deg);
+  animation: rotate-y 500ms forwards ease-out;
+}
+
+@keyframes rotate-y {
+  from {
+    transform: perspective(1000px) rotateX(-90deg);
+  }
+
+  to {
+    transform: perspective(1000px) rotateX(0);
+  }
+}
+
 @media (prefers-reduced-motion) {
   .fade-in {
     opacity: initial;
@@ -82,5 +98,11 @@
 
   .transition {
     transition: none !important;
+  }
+
+  .rotate-y {
+    transform-origin: initial;
+    transform: none;
+    animation: none;
   }
 }

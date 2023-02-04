@@ -2,7 +2,7 @@ import "./Header.scss";
 
 export default function Header() {
     return (
-        <header>
+        <header className="rotate-y">
             <div className="container">
                 <h1>Shuktika<span>.</span></h1>
             </div>
