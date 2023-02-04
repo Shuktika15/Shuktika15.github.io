@@ -20,10 +20,10 @@ export default function Hobbies() {
                     perferendis quae qui quia quibusdam, quo quod recusandae repudiandae sed sint temporibus.
                 </p>
                 <div className="collage css-arts">
+                    <div><CSSArt name="1"/></div>
                     <div><CSSArt name="3"/></div>
                     <div><CSSArt name="2"/></div>
                     <div><CSSArt name="4"/></div>
-                    <div><CSSArt name="1"/></div>
                 </div>
             </article>
             <article className="hobby">
