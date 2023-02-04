@@ -67,7 +67,7 @@
         }
 
         to {
-          width: 18ch;
+          width: 16ch;
         }
       }
 
@@ -77,7 +77,20 @@
 
       i {
         line-height: initial;
-        margin-top: 2px;
+        margin-top: -1.5px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 45rem) and (max-width: 64rem) {
+  #Landing {
+    .myself {
+      .download-resume {
+        i {
+          line-height: initial;
+          margin-top: 2px;
+        }
       }
     }
   }
@@ -121,8 +134,6 @@
       p, i {
         font-size: 1.5rem;
         line-height: 2rem;
-        display: grid;
-        place-items: center;
       }
 
       .socials {
