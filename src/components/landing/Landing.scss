@@ -58,7 +58,7 @@
         overflow-x: hidden;
         white-space: nowrap;
         line-height: initial;
-        animation: expand-horizontal 500ms 6.5s ease-out forwards;
+        animation: expand-horizontal 500ms ease-out forwards;
       }
 
       @keyframes expand-horizontal {

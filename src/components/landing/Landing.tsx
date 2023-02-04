@@ -3,14 +3,15 @@ import "./Landing.scss";
 export default function Landing() {
     return (
         <section id="Landing">
-            <div className="portrait fade-in"></div>
+            <div style={{position: 'absolute', inset: 0}}></div>
+            <div className="portrait fade-in-expand"></div>
             <div className="myself">
-                <h1 className="slide-in" style={{animationDelay: '1s'}}>
+                <h1 className="slide-in" style={{animationDelay: '500ms'}}>
                     Hey I'm
                     <br/>
                     Shuktika Mahanty
                 </h1>
-                <p className="reveal-vertical" style={{animationDelay: '2s'}}>
+                <p className="reveal-vertical" style={{animationDelay: '1.5s'}}>
                     I’m a Web developer & I’m very passionate and dedicated to my work.
                     I have acquired the skills and knowledge necessary to make your project
                     a success.
@@ -20,7 +21,7 @@ export default function Landing() {
                         href="https://github.com/Shuktika15"
                         aria-label="GitHub"
                         className="fade-in"
-                        style={{animationDelay: '3s', animationDuration: '500ms'}}
+                        style={{animationDelay: '2.5s', animationDuration: '200ms'}}
                     >
                         <img src="/icons/github.svg" alt="GitHub"/>
                     </a>
@@ -28,7 +29,7 @@ export default function Landing() {
                         href="https://in.linkedin.com/in/shuktika-mahanty"
                         aria-label="LinkedIn"
                         className="fade-in"
-                        style={{animationDelay: '3.5s', animationDuration: '500ms'}}
+                        style={{animationDelay: '2.7s', animationDuration: '200ms'}}
                     >
                         <img src="/icons/linkedin.svg" alt="LinkedIn"/>
                     </a>
@@ -36,7 +37,7 @@ export default function Landing() {
                         href="https://www.facebook.com/ShuktikaMahanty"
                         aria-label="Facebook"
                         className="fade-in"
-                        style={{animationDelay: '4s', animationDuration: '500ms'}}
+                        style={{animationDelay: '2.9s', animationDuration: '200ms'}}
                     >
                         <img src="/icons/facebook.svg" alt="Facebook"/>
                     </a>
@@ -44,7 +45,7 @@ export default function Landing() {
                         href="https://www.instagram.com/shuktikamahanty"
                         aria-label="Instagram"
                         className="fade-in"
-                        style={{animationDelay: '4.5s', animationDuration: '500ms'}}
+                        style={{animationDelay: '3.1s', animationDuration: '200ms'}}
                     >
                         <img src="/icons/instagram.svg" alt="Instagram"/>
                     </a>
@@ -52,7 +53,7 @@ export default function Landing() {
                         href="https://pinterest.com/shuktikam"
                         aria-label="Pinterest"
                         className="fade-in"
-                        style={{animationDelay: '5s', animationDuration: '500ms'}}
+                        style={{animationDelay: '3.3s', animationDuration: '200ms'}}
                     >
                         <img src="/icons/pinterest.svg" alt="Pinterest"/>
                     </a>
@@ -60,16 +61,16 @@ export default function Landing() {
                         href="https://leetcode.com/shukti"
                         aria-label="LeetCode"
                         className="fade-in"
-                        style={{animationDelay: '5.5s', animationDuration: '500ms'}}
+                        style={{animationDelay: '3.5s', animationDuration: '200ms'}}
                     >
                         <img src="/icons/leetcode.svg" alt="LeetCode"/>
                     </a>
                 </div>
                 <a href="#" className="download-resume color-accent">
-                    <p>Download Resume</p>
+                    <p style={{animationDelay: '4.5s'}}>Download Resume</p>
                     <i
                         className="fa-solid fa-angle-right fade-in"
-                        style={{animationDelay: '6s', animationDuration: '500ms'}}
+                        style={{animationDelay: '4s', animationDuration: '500ms'}}
                     ></i>
                 </a>
             </div>
