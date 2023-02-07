@@ -15,14 +15,22 @@
 
 body {
   background-color: var(--primary-color);
-  font-family: 'Mulish', sans-serif;
   font-size: 1rem;
   letter-spacing: 0.5px;
   overflow-x: hidden;
 }
 
+h1 {
+  font-family: 'Mulish', sans-serif;
+}
+
+h3 {
+  font-family: 'Merriweather', serif;
+}
+
 p {
   font-family: 'Delius', cursive;
+  font-weight: 500;
 }
 
 .container {
