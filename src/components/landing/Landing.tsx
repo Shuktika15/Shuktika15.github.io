@@ -1,6 +1,21 @@
 import "./Landing.scss";
+import React, {useEffect, useRef} from "react";
 
 export default function Landing() {
+    let profiles = useRef(null);
+    let resumeBtn = useRef<HTMLAnchorElement | null>(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            for (const entry of entries) {
+                resumeBtn.current?.classList.toggle("appear", !entry.isIntersecting);
+            }
+        }, {
+            threshold: 1
+        });
+        observer.observe(profiles.current!);
+    }, []);
+
     return (
         <section id="Landing">
             <div style={{position: 'absolute', inset: 0}}></div>
@@ -16,7 +31,7 @@ export default function Landing() {
                     I have acquired the skills and knowledge necessary to make your project
                     a success.
                 </p>
-                <div className="socials">
+                <div className="socials" ref={profiles}>
                     <a
                         href="https://github.com/Shuktika15"
                         aria-label="GitHub"
@@ -74,6 +89,9 @@ export default function Landing() {
                     ></i>
                 </a>
             </div>
+            <a href="#" className="download-resume-fab transition disappear" ref={resumeBtn}>
+                <i className="fa-solid fa-file-arrow-down"></i>
+            </a>
         </section>
     )
 }

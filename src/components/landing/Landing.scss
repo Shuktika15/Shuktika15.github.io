@@ -46,6 +46,7 @@
     }
 
     .download-resume {
+      width: min-content;
       display: flex;
       gap: 0.25rem;
       align-items: center;
@@ -80,6 +81,32 @@
         margin-top: -1.5px;
       }
     }
+  }
+
+  .download-resume-fab {
+    position: fixed;
+    bottom: 1rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: white;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    display: grid;
+    place-items: center;
+    z-index: 100;
+    box-shadow: var(--shadow);
+
+    i {
+      font-size: 1.25rem;
+    }
+  }
+
+  .disappear {
+    right: -4rem;
+  }
+
+  .appear {
+    right: 1rem;
   }
 }
 
@@ -148,6 +175,25 @@
           }
         }
       }
+    }
+
+    .download-resume-fab {
+      height: 3rem;
+      width: 3rem;
+      right: 2rem;
+      bottom: 2rem;
+
+      i {
+        font-size: 1.5rem;
+      }
+    }
+
+    .disappear {
+      right: -5rem;
+    }
+
+    .appear {
+      right: 2rem;
     }
   }
 }

@@ -4,7 +4,7 @@ header {
   padding: 1rem 0;
   background-color: var(--primary-color);
   z-index: 1;
-  box-shadow: 0 0 0.5rem 0.25rem rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow);
 
   h1 {
     font-family: 'Mulish', sans-serif;
