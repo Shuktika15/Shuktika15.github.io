@@ -1,27 +1,29 @@
 import "./Skills.scss";
 import {Data, Skill} from "../../data";
 import {useEffect, useRef} from "react";
+import userObserver from "../../services/observer";
 
 export default function Skills() {
     const skills: Skill[] = Data.skills;
     const skillRefs = useRef<HTMLElement[]>([]);
 
     useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-            for (const entry of entries) {
+        userObserver<HTMLElement>(
+            skillRefs.current,
+            (entry, observer) => {
                 entry.target.classList.toggle("slide", entry.isIntersecting);
 
                 if (entry.isIntersecting) {
                     observer.unobserve(entry.target);
                 }
+            },
+            {
+                threshold: 0.1
+            },
+            (element, index) => {
+                element.style.transitionDelay = `${index * 250}ms`;
             }
-        }, {threshold: 0.1});
-
-        for (let i = 0; i < skillRefs.current.length; i++){
-            const skill = skillRefs.current[i];
-                skill.style.transitionDelay = `${i * 250}ms`;
-                observer.observe(skill);
-        }
+        );
     }, []);
 
     return (

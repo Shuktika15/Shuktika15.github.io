@@ -1,26 +1,26 @@
 import "./Projects.scss";
 import {Data, Project} from "../../data";
 import {useEffect, useRef} from "react";
+import userObserver from "../../services/observer";
 
 export default function Projects() {
     const projects: Project[] = Data.projects;
     const projectRefs = useRef<HTMLElement[]>([]);
 
     useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-            for (const entry of entries) {
+        userObserver(
+            projectRefs.current,
+            (entry, observer) => {
                 entry.target.classList.toggle("slide", entry.isIntersecting);
 
                 if (entry.isIntersecting) {
                     observer.unobserve(entry.target);
                 }
+            },
+            {
+                threshold: 0.1
             }
-        }, {threshold: 0.1});
-
-        for (let i = 0; i < projectRefs.current.length; i++){
-            const skill = projectRefs.current[i];
-            observer.observe(skill);
-        }
+        )
     }, []);
 
     return (
