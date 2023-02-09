@@ -19,6 +19,20 @@ export default function AboutMe() {
                     impedit fugit perspiciatis laudantium voluptates deleniti eius pariatur?
                 </p>
             </article>
+            <article className="bio">
+                <div className="tile">
+                    <p>Lives In</p>
+                    <h3>Narendrapur, Kolkata</h3>
+                </div>
+                <div className="tile">
+                    <p>Born On</p>
+                    <h3>15th, Feb, 1998</h3>
+                </div>
+                <div className="tile">
+                    <p>Speaks</p>
+                    <h3>Bengali, English, Hindi</h3>
+                </div>
+            </article>
         </section>
     )
 }

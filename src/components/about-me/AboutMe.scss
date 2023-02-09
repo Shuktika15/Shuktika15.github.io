@@ -1,6 +1,36 @@
 #AboutMe {
-  h3 {
-    color: var(--accent-color);
-    text-transform: uppercase;
+  .about-me {
+    h3 {
+      color: var(--accent-color);
+      text-transform: uppercase;
+    }
+  }
+
+  .bio {
+    .tile {
+      display: grid;
+      gap: 0.25rem;
+    }
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  #AboutMe {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+
+    h1 {
+      grid-column: 1 / -1;
+    }
+
+    .about-me {
+      grid-column: span 2;
+    }
+
+    .bio {
+      .tile {
+        gap: 0.5rem;
+      }
+    }
   }
 }
