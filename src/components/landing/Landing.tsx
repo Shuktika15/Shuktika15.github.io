@@ -37,6 +37,7 @@ export default function Landing() {
                         aria-label="GitHub"
                         className="fade-in"
                         style={{animationDelay: '2.5s', animationDuration: '200ms'}}
+                        data-tooltip="GitHub"
                     >
                         <img src="/icons/github.svg" alt="GitHub"/>
                     </a>
@@ -45,6 +46,7 @@ export default function Landing() {
                         aria-label="LinkedIn"
                         className="fade-in"
                         style={{animationDelay: '2.7s', animationDuration: '200ms'}}
+                        data-tooltip="LinkedIn"
                     >
                         <img src="/icons/linkedin.svg" alt="LinkedIn"/>
                     </a>
@@ -53,6 +55,7 @@ export default function Landing() {
                         aria-label="Facebook"
                         className="fade-in"
                         style={{animationDelay: '2.9s', animationDuration: '200ms'}}
+                        data-tooltip="Facebook"
                     >
                         <img src="/icons/facebook.svg" alt="Facebook"/>
                     </a>
@@ -61,6 +64,7 @@ export default function Landing() {
                         aria-label="Instagram"
                         className="fade-in"
                         style={{animationDelay: '3.1s', animationDuration: '200ms'}}
+                        data-tooltip="Instagram"
                     >
                         <img src="/icons/instagram.svg" alt="Instagram"/>
                     </a>
@@ -69,6 +73,7 @@ export default function Landing() {
                         aria-label="Pinterest"
                         className="fade-in"
                         style={{animationDelay: '3.3s', animationDuration: '200ms'}}
+                        data-tooltip="Pinterest"
                     >
                         <img src="/icons/pinterest.svg" alt="Pinterest"/>
                     </a>
@@ -77,6 +82,7 @@ export default function Landing() {
                         aria-label="LeetCode"
                         className="fade-in"
                         style={{animationDelay: '3.5s', animationDuration: '200ms'}}
+                        data-tooltip="LeetCode"
                     >
                         <img src="/icons/leetcode.svg" alt="LeetCode"/>
                     </a>
@@ -89,7 +95,13 @@ export default function Landing() {
                     ></i>
                 </a>
             </div>
-            <a href="#" className="download-resume-fab transition disappear" ref={resumeBtn}>
+            <a
+                href="#"
+                className="download-resume-fab transition disappear"
+                data-tooltip="Download Resume"
+                data-tooltip-position="left"
+                ref={resumeBtn}
+            >
                 <i className="fa-solid fa-file-arrow-down"></i>
             </a>
         </section>

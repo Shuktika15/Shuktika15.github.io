@@ -12,29 +12,45 @@
   --accent-color: royalblue;
   --light-color: white;
   --shadow: 0 0 0.5rem 0.25rem rgba(0, 0, 0, 0.1);
+
+  --mulish: 'Mulish', sans-serif;
+  --merriweather: 'Merriweather', serif;
+  --delius: 'Delius', cursive;
+  --fast-transition: 200ms ease-out;
+  --medium-transition: 500ms ease-out;
+  --slow-transition: 1s ease-out;
+}
+
+.dark-theme {
+  --primary-color: #03001C;
+  --secondar-color: #B6EADA;
+  --accent-color: #5B8FB9;
+  --light-color: #0A2647;
+  --shadow: 0 0 0.5rem 0.25rem rgba(255, 255, 255, 0.1);
 }
 
 body {
   background-color: var(--primary-color);
+  color: var(--secondar-color);
   font-size: 1rem;
   letter-spacing: 0.5px;
   overflow-x: hidden;
 }
 
 h1 {
-  font-family: 'Mulish', sans-serif;
+  font-family: var(--mulish);
 }
 
 h3 {
-  font-family: 'Merriweather', serif;
+  font-family: var(--merriweather);
 }
 
 h4 {
-  font-family: Mulish, sans-serif;
+  font-family: var(--mulish)
 }
 
 p {
-  font-family: 'Delius', cursive;
+  font-family: var(--delius);
   font-weight: 500;
 }
 
@@ -77,6 +93,65 @@ article {
 img {
   max-width: 100%;
   height: auto;
+}
+
+@mixin tooltip-position($position: bottom) {
+  &::before {
+    inset: initial;
+
+    @if ($position == bottom) {
+      top: calc(100% + 0.25rem);
+      transform-origin: top;
+    } @else if ($position == left) {
+      right: calc(100% + 0.25rem);
+      transform-origin: right;
+    } @else if ($position == right) {
+      left: calc(100% + 0.25rem);
+      transform-origin: left;
+    } @else if ($position == top) {
+      bottom: calc(100% + 0.25rem);
+      transform-origin: bottom;
+    }
+  }
+}
+
+[data-tooltip] {
+  position: relative;
+  @include tooltip-position();
+
+  &::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    background-color: var(--secondar-color);
+    color: var(--primary-color);
+    text-align: center;
+    border-radius: 0.25rem;
+    font-size: small;
+    font-family: var(--mulish);
+    z-index: 101;
+    overflow: hidden;
+    filter: opacity(0);
+    transform: scale(0);
+    transition: var(--fast-transition);
+    padding: 0.25rem;
+  }
+
+  &:hover::before {
+    transform: scale(1);
+    filter: opacity(0.6)
+  }
+}
+
+[data-tooltip-position='left'] {
+  @include tooltip-position('left');
+}
+
+[data-tooltip-position='right'] {
+  @include tooltip-position('right');
+}
+
+[data-tooltip-position='top'] {
+  @include tooltip-position('top');
 }
 
 .bg-light {
