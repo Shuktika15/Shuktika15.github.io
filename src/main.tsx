@@ -9,12 +9,10 @@ import Experiences from "./components/experiences/Experiences";
 import Educations from "./components/educations/Educations";
 import Projects from "./components/projects/Projects";
 import Hobbies from "./components/hobbies/Hobbies";
-import IntersectionObserverInitializer from "./layout/intersection-observer-initializer";
 
 function App() {
     return (
         <>
-            <IntersectionObserverInitializer/>
             <Header/>
             <div className="container">
                 <main>
