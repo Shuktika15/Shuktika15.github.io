@@ -6,11 +6,57 @@ header {
   z-index: 1;
   box-shadow: var(--shadow);
 
-  h1 {
-    font-family: 'Mulish', sans-serif;
+  a {
+    text-decoration: none;
+  }
 
-    span {
-      color: var(--accent-color);
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+      color: var(--secondar-color);
+      font-family: 'Mulish', sans-serif;
+      flex: 1;
+
+      span {
+        color: var(--accent-color);
+      }
+    }
+
+    .nav-btn {
+      outline-color: transparent;
+      border: none;
+      transition-duration: 100ms;
+
+      i {
+        font-size: x-large;
+      }
+
+      &:has(:focus, :active) {
+        transform: scale(0.8);
+      }
+    }
+
+    nav {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 45rem) {
+  header {
+    .container {
+      .nav-btn {
+        display: none;
+      }
+
+      nav {
+        color: var(--accent-color);
+        display: flex;
+        gap: 1rem;
+      }
     }
   }
 }
