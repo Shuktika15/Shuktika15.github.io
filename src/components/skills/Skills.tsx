@@ -31,7 +31,7 @@ export default function Skills() {
             <h1>Skills</h1>
             {skills.map((skill) => (
                 <article
-                    className="skill relative transition no-slide"
+                    className="card skill relative transition no-slide"
                     key={skill.id}
                     ref={(ref) => skillRefs.current!.push(ref as HTMLElement)}
                 >
