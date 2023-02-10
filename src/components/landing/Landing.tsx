@@ -18,6 +18,7 @@ export default function Landing() {
 
     return (
         <section id="Landing">
+            <div className="blank"></div>
             <div className="portrait fade-in-expand"></div>
             <div className="myself">
                 <h1 className="slide-in" style={{animationDelay: '500ms'}}>
