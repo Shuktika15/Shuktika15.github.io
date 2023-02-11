@@ -30,7 +30,7 @@ export default function Landing() {
                     <br/>
                     Shuktika Mahanty
                 </h1>
-                <p className="reveal-vertical" style={{animationDelay: '1.5s'}}>
+                <p className="introduction reveal-vertical" style={{animationDelay: '1.5s'}}>
                     I’m a Web developer & I’m very passionate and dedicated to my work.
                     I have acquired the skills and knowledge necessary to make your project
                     a success.
@@ -93,10 +93,10 @@ export default function Landing() {
                 </div>
                 <a href="/documents/resume.pdf" target="_blank" className="download-resume color-accent">
                     <p style={{animationDelay: '4.5s'}}>Download Resume</p>
-                    <i
-                        className="fa-solid fa-angle-right fade-in"
+                    <span
+                        className="download-arrow material-icons-round fade-in"
                         style={{animationDelay: '4s', animationDuration: '500ms'}}
-                    ></i>
+                    >navigate_next</span>
                 </a>
             </div>
             <a
@@ -107,7 +107,7 @@ export default function Landing() {
                 data-tooltip-position="left"
                 ref={resumeBtn}
             >
-                <i className="fa-solid fa-file-arrow-down"></i>
+                <span className="material-icons-round">file_download</span>
             </a>
         </section>
     )

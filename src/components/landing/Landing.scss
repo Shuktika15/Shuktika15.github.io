@@ -22,7 +22,7 @@
     display: grid;
     gap: 1rem;
 
-    p {
+    .introduction {
       line-height: 1.5rem;
     }
 
@@ -49,9 +49,7 @@
     .download-resume {
       width: min-content;
       display: flex;
-      gap: 0.25rem;
       align-items: center;
-      padding: 0.25rem 0;
       text-decoration: none;
 
       p {
@@ -59,7 +57,6 @@
         width: 0;
         overflow-x: hidden;
         white-space: nowrap;
-        line-height: initial;
         animation: expand-horizontal 500ms ease-out forwards;
       }
 
@@ -77,9 +74,10 @@
         animation: none;
       }
 
-      i {
-        line-height: initial;
+      .download-arrow {
+        font-size: 1.75rem;
         margin-top: -1.5px;
+        margin-left: -0.5rem;
       }
     }
   }
@@ -97,8 +95,8 @@
     z-index: 100;
     box-shadow: var(--shadow);
 
-    i {
-      font-size: 1.25rem;
+    span {
+      font-size: 1.5rem;
     }
   }
 
@@ -115,9 +113,10 @@
   #Landing {
     .myself {
       .download-resume {
-        i {
-          line-height: initial;
-          margin-top: 2px;
+        .download-arrow {
+          font-size: 2.25rem;
+          margin-top: 0.01rem;
+          margin-left: -0.75rem;
         }
       }
     }
@@ -142,8 +141,27 @@
         font-size: 2.5rem;
       }
 
-      p, i {
+      .introduction {
         line-height: 1.75rem;
+      }
+
+      .download-resume {
+        .download-arrow {
+          font-size: 2.25rem;
+          margin-top: 0.01rem;
+          margin-left: -0.75rem;
+        }
+      }
+    }
+
+    .download-resume-fab {
+      height: 2.75rem;
+      width: 2.75rem;
+      right: 1.75rem;
+      bottom: 1.75rem;
+
+      span {
+        font-size: 1.75rem;
       }
     }
   }
@@ -158,9 +176,14 @@
         font-size: 3rem;
       }
 
-      p, i {
+      .introduction {
         font-size: 1.5rem;
         line-height: 2rem;
+      }
+
+      .download-arrow {
+        font-size: 2.75rem;
+        margin-left: -1rem;
       }
 
       .socials {
@@ -183,8 +206,8 @@
       right: 2rem;
       bottom: 2rem;
 
-      i {
-        font-size: 1.5rem;
+      span {
+        font-size: 2rem;
       }
     }
 

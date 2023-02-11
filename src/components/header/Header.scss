@@ -37,9 +37,11 @@
         outline-color: transparent;
         border: none;
         transition-duration: 100ms;
+        background-color: transparent;
+        display: grid;
 
-        i {
-          font-size: x-large;
+        span {
+          font-size: xx-large;
         }
 
         &:has(:focus, :active) {

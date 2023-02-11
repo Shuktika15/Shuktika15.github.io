@@ -45,8 +45,8 @@ export default function Projects() {
                             className="transition"
                             loading="lazy"
                         />
-                        <a href={project.github}>
-                            <i className="fa-brands fa-github" aria-label="GitHub Link"></i>
+                        <a href={project.github} className="github">
+                            <span className="material-icons-round">code</span>
                         </a>
                     </div>
                     <div className="card-body">

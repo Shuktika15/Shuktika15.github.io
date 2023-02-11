@@ -51,7 +51,7 @@ export default function Header() {
                         <h1>Shuktika<span>.</span></h1>
                     </a>
                     <button className="nav-btn transition" onClick={closeNavPopup}>
-                        <i className="fa-solid fa-bars"></i>
+                        <span className="material-icons-round">menu</span>
                     </button>
                     <nav>
                         {anchors.map((anchor) => {

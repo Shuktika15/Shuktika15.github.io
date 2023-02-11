@@ -62,6 +62,7 @@ p {
 
 a {
   color: initial;
+  text-decoration: none;
 
   &:active {
     color: initial;
@@ -168,6 +169,10 @@ img {
   @include tooltip-position('top');
 }
 
+.material-icons-round {
+  font-size: 1.25rem;
+}
+
 .bg-light {
   background-color: var(--light-color);
 }
@@ -234,8 +239,12 @@ img {
     font-size: 1.5rem;
   }
 
-  p, i {
+  p {
     font-size: 1.25rem;
+  }
+
+  .material-icons-round {
+    font-size: 1.5rem;
   }
 }
 

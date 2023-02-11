@@ -16,7 +16,7 @@ export default function Experiences() {
             {experiences.map((experience, index) => (
                 <article className="experience" key={experience.id}>
                     <h3>{experience.company}</h3>
-                    <p><i className="fa-regular fa-calendar"></i> {timeline(experience)}</p>
+                    <p className="timeline"><span className="material-icons-round"> date_range</span> {timeline(experience)}</p>
                     {experience.descriptions.map((description) => (
                         <p className="content" key={description}>{description}</p>
                     ))}
