@@ -36,13 +36,9 @@ export default function Hobbies() {
                 <div className="collage digital-paintings">
                     <div><DigitalPainting name="3"/></div>
                     <div><DigitalPainting name="5"/></div>
-                    <div><DigitalPainting name="13"/></div>
-                    <div><DigitalPainting name="11"/></div>
-                    <div><DigitalPainting name="6"/></div>
                     <div><DigitalPainting name="12"/></div>
-                    <div><DigitalPainting name="14"/></div>
-                    <div><DigitalPainting name="15"/></div>
                     <div><DigitalPainting name="4"/></div>
+                    <div><DigitalPainting name="6"/></div>
                 </div>
             </article>
         </section>
