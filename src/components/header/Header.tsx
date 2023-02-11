@@ -54,14 +54,11 @@ export default function Header() {
                         <i className="fa-solid fa-bars"></i>
                     </button>
                     <nav>
-                        {anchors.map((anchor, index) => {
+                        {anchors.map((anchor) => {
                             return (
-                                <div key={anchor.href}>
-                                    <a href={`/#${anchor.href}`}>
-                                        <p>{anchor.title}</p>
-                                    </a>
-                                    {index === anchors.length ? <></> : <hr/>}
-                                </div>
+                                <a href={`/#${anchor.href}`} key={anchor.href}>
+                                    <p>{anchor.title}</p>
+                                </a>
                             )
                         })}
                     </nav>
