@@ -91,7 +91,7 @@ export default function Landing() {
                         <img src="/icons/leetcode.svg" alt="LeetCode"/>
                     </a>
                 </div>
-                <a href="#" className="download-resume color-accent">
+                <a href="/documents/resume.pdf" target="_blank" className="download-resume color-accent">
                     <p style={{animationDelay: '4.5s'}}>Download Resume</p>
                     <i
                         className="fa-solid fa-angle-right fade-in"
@@ -100,7 +100,8 @@ export default function Landing() {
                 </a>
             </div>
             <a
-                href="#"
+                href="/documents/resume.pdf"
+                target="_blank"
                 className="download-resume-fab transition disappear"
                 data-tooltip="Download Resume"
                 data-tooltip-position="left"
