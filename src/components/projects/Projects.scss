@@ -58,12 +58,20 @@
 
         img {
           border-radius: 1rem;
+          box-shadow: var(--shadow);
+          transition: var(--fast-transition);
         }
       }
 
       .card-body {
         height: min-content;
         padding: 0 1.5rem;
+      }
+
+      &:hover {
+        img {
+          transform: perspective(1000px) translateZ(0.5rem);
+        }
       }
     }
   }

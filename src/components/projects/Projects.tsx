@@ -39,7 +39,12 @@ export default function Projects() {
                     ref={(ref) => projectRefs.current.push(ref as HTMLElement)}
                 >
                     <div className="card-header">
-                        <img loading="lazy" src={`/images/projects/${project.background}`} alt={project.title}/>
+                        <img
+                            src={`/images/projects/${project.background}`}
+                            alt={project.title}
+                            className="transition"
+                            loading="lazy"
+                        />
                         <a href={project.github}>
                             <i className="fa-brands fa-github" aria-label="GitHub Link"></i>
                         </a>
