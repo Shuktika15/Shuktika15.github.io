@@ -3,10 +3,10 @@ import "./Hobbies.scss";
 export default function Hobbies() {
     type ImageProp = {name: string, image: string}
     const CSSArt = (props: ImageProp) => {
-        return <img loading="lazy" src={`/images/css-arts/${props.image}.jpg`} alt={props.name}/>
+        return <img loading="lazy" src={`/images/css-arts/${props.image}.webp`} alt={props.name}/>
     }
     const DigitalPainting = (props: ImageProp) => {
-        return <img loading="lazy" src={`/images/digital-paintings/${props.image}.jpg`} alt={props.name}/>
+        return <img loading="lazy" src={`/images/digital-paintings/${props.image}.webp`} alt={props.name}/>
     }
 
     return (
