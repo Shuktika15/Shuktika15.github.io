@@ -64,8 +64,8 @@ export default function Header() {
                     </nav>
                 </div>
             </header>
-            <div className="container nav-popup">
-                <nav className="transition" ref={navPopup}>
+            {<div className="container nav-popup transition" ref={navPopup}>
+                <nav>
                     {anchors.map((anchor, index) => {
                         return (
                             <div key={anchor.href}>
@@ -77,7 +77,7 @@ export default function Header() {
                         )
                     })}
                 </nav>
-            </div>
+            </div>}
         </div>
     );
 }

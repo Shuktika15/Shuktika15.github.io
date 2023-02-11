@@ -57,6 +57,9 @@
 
   .nav-popup {
     $gap: 0.5rem;
+    transform: scale(0);
+    transform-origin: top right;
+    transition: var(--fast-transition);
 
     nav {
       width: min-content;
@@ -71,9 +74,6 @@
       justify-content: center;
       text-align: center;
       gap: $gap;
-      transform-origin: top right;
-      transform: scale(0);
-      transition: var(--fast-transition);
 
       div {
         grid-column: span;
@@ -91,10 +91,10 @@
         }
       }
     }
+  }
 
-    .open {
-      transform: scale(1);
-    }
+  .open {
+    transform: scale(1);
   }
 
   .overlay {
