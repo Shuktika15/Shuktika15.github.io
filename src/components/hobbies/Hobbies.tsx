@@ -1,12 +1,12 @@
 import "./Hobbies.scss";
 
 export default function Hobbies() {
-    type ImageProp = {name: string}
+    type ImageProp = {name: string, image: string}
     const CSSArt = (props: ImageProp) => {
-        return <img loading="lazy" src={`/images/css-arts/${props.name}.jpg`} alt={props.name}/>
+        return <img loading="lazy" src={`/images/css-arts/${props.image}.jpg`} alt={props.name}/>
     }
     const DigitalPainting = (props: ImageProp) => {
-        return <img loading="lazy" src={`/images/digital-paintings/${props.name}.jpg`} alt={props.name}/>
+        return <img loading="lazy" src={`/images/digital-paintings/${props.image}.jpg`} alt={props.name}/>
     }
 
     return (
@@ -20,10 +20,10 @@ export default function Hobbies() {
                     perferendis quae qui quia quibusdam, quo quod recusandae repudiandae sed sint temporibus.
                 </p>
                 <div className="collage css-arts">
-                    <div><CSSArt name="1"/></div>
-                    <div><CSSArt name="3"/></div>
-                    <div><CSSArt name="2"/></div>
-                    <div><CSSArt name="4"/></div>
+                    <div><CSSArt name="Eye" image="eye"/></div>
+                    <div><CSSArt name="Santa" image="santa"/></div>
+                    <div><CSSArt name="Red" image="red"/></div>
+                    <div><CSSArt name="Butterfly" image="butterfly"/></div>
                 </div>
             </article>
             <article className="hobby">
@@ -34,11 +34,11 @@ export default function Hobbies() {
                     perferendis quae qui quia quibusdam, quo quod recusandae repudiandae sed sint temporibus.
                 </p>
                 <div className="collage digital-paintings">
-                    <div><DigitalPainting name="3"/></div>
-                    <div><DigitalPainting name="5"/></div>
-                    <div><DigitalPainting name="12"/></div>
-                    <div><DigitalPainting name="4"/></div>
-                    <div><DigitalPainting name="6"/></div>
+                    <div><DigitalPainting name="Shuktikam" image="shuktikam"/></div>
+                    <div><DigitalPainting name="Girl and the Cat" image="girl-and-the-cat"/></div>
+                    <div><DigitalPainting name="Dawn" image="dawn"/></div>
+                    <div><DigitalPainting name="Swirl" image="swirl"/></div>
+                    <div><DigitalPainting name="Flower" image="flower"/></div>
                 </div>
             </article>
         </section>
