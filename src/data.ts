@@ -141,7 +141,7 @@ export const Data: DataType = {
         {
             id: 1,
             title: 'Pension Management System',
-            background: 'project.jpg',
+            background: 'pension-management.webp',
             github: 'https://github.com/Shuktika15/pension-management',
             descriptions: [
                 `Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -154,7 +154,7 @@ export const Data: DataType = {
         {
             id: 2,
             title: 'Airline Management System',
-            background: 'project.jpg',
+            background: 'airline-reservation.webp',
             github: 'https://github.com/Shuktika15/airline_ticket_reservation_system',
             descriptions: [
                 `Lorem ipsum dolor sit amet, consectetur adipisicige elit.
