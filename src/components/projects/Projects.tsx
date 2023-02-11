@@ -2,6 +2,7 @@ import "./Projects.scss";
 import {Data, Project} from "../../data";
 import {useEffect, useRef} from "react";
 import userObserver from "../../services/observer";
+import useTilt from "../../services/tilt";
 
 export default function Projects() {
     const projects: Project[] = Data.projects;
@@ -20,7 +21,12 @@ export default function Projects() {
             {
                 threshold: 0.1
             }
-        )
+        );
+        projectRefs.current.forEach(project => useTilt(project, {
+            perspective: 1000,
+            tilt: 5,
+            transitionDuration: 100
+        }));
     }, []);
 
     return (
