@@ -129,3 +129,27 @@
     }
   }
 }
+
+@media screen and (min-width: 64rem) {
+  #Header {
+    header {
+      .container {
+        nav {
+          gap: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  #Header {
+    header {
+      .container {
+        nav {
+          gap: 2rem;
+        }
+      }
+    }
+  }
+}
