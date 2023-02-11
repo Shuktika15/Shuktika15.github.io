@@ -45,7 +45,7 @@ export default function Projects() {
                             className="transition"
                             loading="lazy"
                         />
-                        <a href={project.github} className="github">
+                        <a href={project.github} target="_blank" className="github">
                             <span className="material-icons-round">code</span>
                         </a>
                     </div>
