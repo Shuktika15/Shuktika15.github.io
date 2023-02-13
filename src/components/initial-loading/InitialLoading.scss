@@ -1,7 +1,24 @@
+@use "sass:list";
+
 #InitialLoading {
   svg {
-    mask {
-      rect {
+    $stroke-lengths: 436, 475, 430, 461, 303, 208, 461, 430;
+
+    path {
+      stroke: var(--secondar-color);
+    }
+
+    @for $i from 1 through list.length($stroke-lengths) {
+      path:nth-child(#{$i}) {
+        stroke-dasharray: list.nth($stroke-lengths, $i);
+         stroke-dashoffset: list.nth($stroke-lengths, $i);
+        animation: stroke 2s forwards;
+      }
+    }
+
+    @keyframes stroke {
+      to {
+        stroke-dasharray: 0;
       }
     }
   }
