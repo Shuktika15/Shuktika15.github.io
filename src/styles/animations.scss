@@ -94,6 +94,22 @@
   }
 }
 
+.fade-out-slide-up {
+  animation: fade-out-slide-up 1s forwards;
+}
+
+@keyframes fade-out-slide-up {
+  from {
+    opacity: 1;
+    margin-top: 0;
+  }
+
+  to {
+    opacity: 0;
+    margin-top: -10rem;
+  }
+}
+
 @media (prefers-reduced-motion) {
   .fade-in {
     opacity: initial;
@@ -122,6 +138,10 @@
   .rotate-y {
     transform-origin: initial;
     transform: none;
+    animation: none;
+  }
+
+  .fade-out-slide-up {
     animation: none;
   }
 }

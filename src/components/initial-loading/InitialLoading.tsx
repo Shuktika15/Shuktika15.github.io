@@ -3,16 +3,21 @@ import {useEffect, useRef} from "react";
 
 export default function InitialLoading() {
     const svg = useRef<SVGSVGElement | null>(null);
+    const svgContainer = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
         setTimeout(() => {
-            svg.current!.classList.add("spread");
+            svg.current!.classList.add('spread');
         }, 2500);
+
+        setTimeout(() => {
+            svgContainer.current!.classList.add("fade-out-slide-up")
+        }, 5000);
     }, []);
 
     return (
         <div id="InitialLoading">
-            <div className="container">
+            <div className="container" ref={svgContainer}>
                 <svg width="704" height="102" viewBox="0 0 704 102" fill="none" xmlns="http://www.w3.org/2000/svg"
                      ref={svg}>
                     <path
