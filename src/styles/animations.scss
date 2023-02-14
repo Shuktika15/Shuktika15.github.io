@@ -33,18 +33,14 @@
 }
 
 .slide-in {
-  left: -100vw;
+  right: -100vw;
   position: relative;
   animation: slide-in 1s ease-out forwards;
 }
 
 @keyframes slide-in {
-  from {
-    left: -100vw;
-  }
-
   to {
-    left: 0;
+    right: 0;
   }
 }
 

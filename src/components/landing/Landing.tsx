@@ -4,6 +4,7 @@ import React, {useEffect, useRef} from "react";
 export default function Landing() {
     let profiles = useRef(null);
     let resumeBtn = useRef<HTMLAnchorElement | null>(null);
+    const animationStart = 6;
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
@@ -23,14 +24,15 @@ export default function Landing() {
                 src="/images/me.webp"
                 alt="Me"
                 className="portrait fade-in-expand"
+                style={{animationDelay: `${animationStart}s`}}
             />
             <div className="myself">
-                <h1 className="slide-in" style={{animationDelay: '500ms'}}>
+                <h1 className="slide-in" style={{animationDelay: `${animationStart + 0.5}s`}}>
                     Hey I'm
                     <br/>
                     Shuktika Mahanty
                 </h1>
-                <p className="introduction reveal-vertical" style={{animationDelay: '1.5s'}}>
+                <p className="introduction reveal-vertical" style={{animationDelay: `${animationStart + 1.5}s`}}>
                     I’m a Web developer & I’m very passionate and dedicated to my work.
                     I have acquired the skills and knowledge necessary to make your project
                     a success.
@@ -40,7 +42,7 @@ export default function Landing() {
                         href="https://github.com/Shuktika15"
                         aria-label="GitHub"
                         className="fade-in"
-                        style={{animationDelay: '2.5s', animationDuration: '200ms'}}
+                        style={{animationDelay: `${animationStart + 2.5}s`, animationDuration: '200ms'}}
                         data-tooltip="GitHub"
                     >
                         <img src="/icons/github.svg" alt="GitHub"/>
@@ -49,7 +51,7 @@ export default function Landing() {
                         href="https://in.linkedin.com/in/shuktika-mahanty"
                         aria-label="LinkedIn"
                         className="fade-in"
-                        style={{animationDelay: '2.7s', animationDuration: '200ms'}}
+                        style={{animationDelay: `${animationStart + 2.7}s`, animationDuration: '200ms'}}
                         data-tooltip="LinkedIn"
                     >
                         <img src="/icons/linkedin.svg" alt="LinkedIn"/>
@@ -58,7 +60,7 @@ export default function Landing() {
                         href="https://www.facebook.com/ShuktikaMahanty"
                         aria-label="Facebook"
                         className="fade-in"
-                        style={{animationDelay: '2.9s', animationDuration: '200ms'}}
+                        style={{animationDelay: `${animationStart + 2.9}s`, animationDuration: '200ms'}}
                         data-tooltip="Facebook"
                     >
                         <img src="/icons/facebook.svg" alt="Facebook"/>
@@ -67,7 +69,7 @@ export default function Landing() {
                         href="https://www.instagram.com/shuktikamahanty"
                         aria-label="Instagram"
                         className="fade-in"
-                        style={{animationDelay: '3.1s', animationDuration: '200ms'}}
+                        style={{animationDelay: `${animationStart + 3.1}s`, animationDuration: '200ms'}}
                         data-tooltip="Instagram"
                     >
                         <img src="/icons/instagram.svg" alt="Instagram"/>
@@ -76,7 +78,7 @@ export default function Landing() {
                         href="https://pinterest.com/shuktikam"
                         aria-label="Pinterest"
                         className="fade-in"
-                        style={{animationDelay: '3.3s', animationDuration: '200ms'}}
+                        style={{animationDelay: `${animationStart + 3.3}s`, animationDuration: '200ms'}}
                         data-tooltip="Pinterest"
                     >
                         <img src="/icons/pinterest.svg" alt="Pinterest"/>
@@ -85,17 +87,17 @@ export default function Landing() {
                         href="https://leetcode.com/shukti"
                         aria-label="LeetCode"
                         className="fade-in"
-                        style={{animationDelay: '3.5s', animationDuration: '200ms'}}
+                        style={{animationDelay: `${animationStart + 3.5}s`, animationDuration: '200ms'}}
                         data-tooltip="LeetCode"
                     >
                         <img src="/icons/leetcode.svg" alt="LeetCode"/>
                     </a>
                 </div>
                 <a href="/documents/resume.pdf" target="_blank" className="download-resume color-accent">
-                    <p style={{animationDelay: '4.5s'}}>Download Resume</p>
+                    <p style={{animationDelay: `${animationStart + 4.5}s`}}>Download Resume</p>
                     <span
                         className="download-arrow material-icons-round fade-in"
-                        style={{animationDelay: '4s', animationDuration: '500ms'}}
+                        style={{animationDelay: `${animationStart + 4}s`, animationDuration: '500ms'}}
                     >navigate_next</span>
                 </a>
             </div>

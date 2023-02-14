@@ -128,9 +128,9 @@
   #Landing {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
 
     .portrait {
-      order: 2;
       max-height: 40rem;
       margin: auto;
     }
@@ -170,6 +170,8 @@
 
 @media screen and (min-width: 75rem) {
   #Landing {
+    gap: 4rem;
+
     .myself {
       gap: 2rem;
 

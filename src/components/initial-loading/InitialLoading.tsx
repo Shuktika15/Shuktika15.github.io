@@ -13,7 +13,14 @@ export default function InitialLoading() {
         setTimeout(() => {
             svgContainer.current!.classList.add("fade-out-slide-up")
         }, 5000);
+
+        document.body.style.overflowY = "hidden";
+
+        setTimeout(() => {
+            document.body.style.overflowY = 'auto';
+        }, 6000);
     }, []);
+
 
     return (
         <div id="InitialLoading">

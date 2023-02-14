@@ -45,7 +45,7 @@ export default function Header() {
     return (
         <div id="Header">
             <div className="overlay" ref={popupOverlay} onClick={closeNavPopup}></div>
-            <header className="rotate-y">
+            <header className="rotate-y" style={{animationDelay: '6s'}}>
                 <div className="container">
                     <a href="/#Landing">
                         <h1>Shuktika<span>.</span></h1>

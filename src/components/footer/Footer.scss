@@ -1,0 +1,13 @@
+#Footer {
+  background-color: var(--accent-color);
+  margin-top: 1.5rem;
+
+  footer {
+    padding: 1.5rem;
+
+    p {
+      color: rgba(var(--light-color));
+      text-align: center;
+    }
+  }
+}

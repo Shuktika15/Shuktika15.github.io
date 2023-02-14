@@ -10,11 +10,25 @@ import Educations from "./components/educations/Educations";
 import Projects from "./components/projects/Projects";
 import Hobbies from "./components/hobbies/Hobbies";
 import InitialLoading from "./components/initial-loading/InitialLoading";
+import Footer from "./components/footer/Footer";
 
 function App() {
     return (
         <>
             <InitialLoading/>
+            <Header/>
+            <div className="container">
+                <main>
+                    <Landing/>
+                    <AboutMe/>
+                    <Skills/>
+                    <Experiences/>
+                    <Educations/>
+                    <Projects/>
+                    <Hobbies/>
+                </main>
+            </div>
+            <Footer/>
         </>
     )
 }
