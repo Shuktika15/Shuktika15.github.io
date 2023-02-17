@@ -60,7 +60,7 @@ export default function Header() {
                                 <a
                                     href={`/#${anchor.href}`}
                                     className="fade-in-slide-in"
-                                    style={{animationDelay: `${animationStarts + (800 - index * 200)}ms`}}
+                                    style={{animationDelay: `${animationStarts + (1250 - index * 250)}ms`}}
                                     key={anchor.href}
                                 >
                                     <p>{anchor.title}</p>
