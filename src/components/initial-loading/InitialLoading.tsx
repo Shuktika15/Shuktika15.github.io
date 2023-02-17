@@ -12,7 +12,7 @@ export default function InitialLoading() {
         }, 2500);
 
         setTimeout(() => {
-            svgContainer.current!.classList.add("fade-out-slide-up")
+            svgContainer.current!.classList.add("fade-out-slide-up-stretch")
         }, 5000);
 
         document.body.style.overflowY = "hidden";
