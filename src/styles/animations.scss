@@ -106,6 +106,20 @@
   }
 }
 
+.fade-in-slide-in {
+  position: relative;
+  left: 1rem;
+  opacity: 0;
+  animation: fade-in-slide-in 200ms forwards ease-out;
+}
+
+@keyframes fade-in-slide-in {
+  to {
+    left: 0;
+    opacity: 1;
+  }
+}
+
 @media (prefers-reduced-motion) {
   .fade-in {
     opacity: initial;

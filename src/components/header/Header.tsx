@@ -32,6 +32,7 @@ export default function Header() {
     const navPopup = useRef<HTMLDivElement | null>(null);
     const popupOverlay = useRef<HTMLDivElement | null>(null);
     const [navPopupOpened, setNavPopupOpened] = useState<boolean>(false);
+    const animationStarts = 6000;
 
     useEffect(() => {
         navPopup.current!.classList.toggle('open', navPopupOpened);
@@ -45,7 +46,7 @@ export default function Header() {
     return (
         <div id="Header">
             <div className="overlay" ref={popupOverlay} onClick={closeNavPopup}></div>
-            <header className="rotate-y" style={{animationDelay: '6s'}}>
+            <header className="rotate-y" style={{animationDelay: `${animationStarts}ms`}}>
                 <div className="container">
                     <a href="/#Landing">
                         <h1>Shuktika<span>.</span></h1>
@@ -54,9 +55,14 @@ export default function Header() {
                         <span className="material-icons-round">menu</span>
                     </button>
                     <nav>
-                        {anchors.map((anchor) => {
+                        {anchors.map((anchor, index) => {
                             return (
-                                <a href={`/#${anchor.href}`} key={anchor.href}>
+                                <a
+                                    href={`/#${anchor.href}`}
+                                    className="fade-in-slide-in"
+                                    style={{animationDelay: `${animationStarts + (800 - index * 200)}ms`}}
+                                    key={anchor.href}
+                                >
                                     <p>{anchor.title}</p>
                                 </a>
                             )
