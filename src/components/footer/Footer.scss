@@ -1,5 +1,5 @@
 #Footer {
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
 
   footer {
     padding: 1.5rem;
@@ -8,5 +8,23 @@
       color: rgba(var(--secondar-color));
       text-align: center;
     }
+  }
+}
+
+@media screen and (min-width: 45rem) {
+  #Footer {
+    margin-top: 0.75rem;
+  }
+}
+
+@media screen and (min-width: 65rem) {
+  #Footer {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  #Footer {
+    margin-top: 1.25rem;
   }
 }
