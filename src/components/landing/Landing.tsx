@@ -44,6 +44,7 @@ export default function Landing() {
                         className="fade-in"
                         style={{animationDelay: `${animationStart + 2.5}s`, animationDuration: '200ms'}}
                         data-tooltip="GitHub"
+                        target="_blank"
                     >
                         <img src="/icons/github.svg" alt="GitHub"/>
                     </a>
@@ -53,6 +54,7 @@ export default function Landing() {
                         className="fade-in"
                         style={{animationDelay: `${animationStart + 2.7}s`, animationDuration: '200ms'}}
                         data-tooltip="LinkedIn"
+                        target="_blank"
                     >
                         <img src="/icons/linkedin.svg" alt="LinkedIn"/>
                     </a>
@@ -62,6 +64,7 @@ export default function Landing() {
                         className="fade-in"
                         style={{animationDelay: `${animationStart + 2.9}s`, animationDuration: '200ms'}}
                         data-tooltip="Facebook"
+                        target="_blank"
                     >
                         <img src="/icons/facebook.svg" alt="Facebook"/>
                     </a>
@@ -71,6 +74,7 @@ export default function Landing() {
                         className="fade-in"
                         style={{animationDelay: `${animationStart + 3.1}s`, animationDuration: '200ms'}}
                         data-tooltip="Instagram"
+                        target="_blank"
                     >
                         <img src="/icons/instagram.svg" alt="Instagram"/>
                     </a>
@@ -80,6 +84,7 @@ export default function Landing() {
                         className="fade-in"
                         style={{animationDelay: `${animationStart + 3.3}s`, animationDuration: '200ms'}}
                         data-tooltip="Pinterest"
+                        target="_blank"
                     >
                         <img src="/icons/pinterest.svg" alt="Pinterest"/>
                     </a>
@@ -89,6 +94,7 @@ export default function Landing() {
                         className="fade-in"
                         style={{animationDelay: `${animationStart + 3.5}s`, animationDuration: '200ms'}}
                         data-tooltip="LeetCode"
+                        target="_blank"
                     >
                         <img src="/icons/leetcode.svg" alt="LeetCode"/>
                     </a>
