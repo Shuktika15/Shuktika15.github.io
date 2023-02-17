@@ -2,6 +2,7 @@ import "./InitialLoading.scss";
 import {useEffect, useRef} from "react";
 
 export default function InitialLoading() {
+    const initialLoadingDiv = useRef<HTMLDivElement | null>(null);
     const svg = useRef<SVGSVGElement | null>(null);
     const svgContainer = useRef<HTMLDivElement | null>(null);
 
@@ -18,12 +19,13 @@ export default function InitialLoading() {
 
         setTimeout(() => {
             document.body.style.overflowY = 'auto';
+            initialLoadingDiv.current!.style.display = 'none';
         }, 6000);
     }, []);
 
 
     return (
-        <div id="InitialLoading">
+        <div id="InitialLoading" ref={initialLoadingDiv}>
             <div className="container" ref={svgContainer}>
                 <svg width="704" height="102" viewBox="0 0 704 102" fill="none" xmlns="http://www.w3.org/2000/svg"
                      ref={svg}>
