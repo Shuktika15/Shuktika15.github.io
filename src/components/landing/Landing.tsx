@@ -33,9 +33,9 @@ export default function Landing() {
                     Shuktika Mahanty
                 </h1>
                 <p className="introduction reveal-vertical" style={{animationDelay: `${animationStart + 1.5}s`}}>
-                    I’m a Web developer & I’m very passionate and dedicated to my work.
-                    I have acquired the skills and knowledge necessary to make your project
-                    a success.
+                    I'm a full stack developer committed to achieving exceptional results through my passion for coding.
+                    My well-rounded expertise enable me to deliver efficient projects that meet the
+                    desired specifications.
                 </p>
                 <div className="socials" ref={profiles}>
                     <a
