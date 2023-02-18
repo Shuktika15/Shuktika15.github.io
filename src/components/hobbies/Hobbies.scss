@@ -11,6 +11,8 @@
         min-height: 10rem;
         border-radius: .5rem;
         background-color: var(--light-color);
+        opacity: 1;
+        transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
 
         img {
           max-width: initial;

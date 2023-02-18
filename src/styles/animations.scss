@@ -123,6 +123,26 @@
   }
 }
 
+.fade-in-flip-down-to-up {
+  opacity: 0 !important;
+  transform: perspective(1000px) rotateX(90deg) !important;
+}
+
+.fade-in-flip-up-to-down {
+  opacity: 0 !important;
+  transform: perspective(1000px) rotateX(-90deg) !important;
+}
+
+.fade-in-flip-left-to-right {
+  opacity: 0 !important;
+  transform: perspective(1000px) rotateY(90deg) !important;
+}
+
+.fade-in-flip-right-to-left {
+  opacity: 0 !important;
+  transform: perspective(1000px) rotateY(-90deg) !important;
+}
+
 @media (prefers-reduced-motion) {
   .fade-in {
     opacity: initial;

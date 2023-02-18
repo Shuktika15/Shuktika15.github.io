@@ -1,13 +1,74 @@
 import "./Hobbies.scss";
+import {useEffect, useRef} from "react";
+import userObserver from "../../services/observer";
 
 export default function Hobbies() {
-    type ImageProp = {name: string, image: string}
+    type ImageProp = { name: string, image: string };
     const CSSArt = (props: ImageProp) => {
         return <img loading="lazy" src={`/images/css-arts/${props.image}.webp`} alt={props.name}/>
     }
     const DigitalPainting = (props: ImageProp) => {
         return <img loading="lazy" src={`/images/digital-paintings/${props.image}.webp`} alt={props.name}/>
     }
+    type Image = { name: string, image: string, animationClass: string };
+    const cssArts: Image[] = [
+        {
+            name: 'Eye',
+            image: 'eye',
+            animationClass: 'fade-in-flip-down-to-up'
+        }, {
+            name: 'Santa',
+            image: 'santa',
+            animationClass: 'fade-in-flip-right-to-left'
+        }, {
+            name: 'Read',
+            image: 'red',
+            animationClass: 'fade-in-flip-left-to-right'
+        }, {
+            name: 'Butterfly',
+            image: 'butterfly',
+            animationClass: 'fade-in-flip-up-to-down'
+        }
+    ]
+    const digitalPaintings: Image[] = [
+        {
+            name: 'Shuktikam',
+            image: 'shuktikam',
+            animationClass: 'fade-in-flip-right-to-left'
+        }, {
+            name: 'Girl and the Cat',
+            image: 'girl-and-the-cat',
+            animationClass: 'fade-in-flip-up-to-down'
+        }, {
+            name: 'Dawn',
+            image: 'dawn',
+            animationClass: 'fade-in-flip-left-to-right'
+        }, {
+            name: 'Swirl',
+            image: 'swirl',
+            animationClass: 'fade-in-flip-down-to-up'
+        }, {
+            name: 'Flower',
+            image: 'flower',
+            animationClass: 'fade-in-flip-right-to-left'
+        }
+    ]
+    const imageRefs = useRef<HTMLElement[]>([]);
+
+    useEffect(() => {
+        userObserver<HTMLElement>(
+            imageRefs.current!,
+            (entry, observer) => {
+                if (entry.isIntersecting) {
+                    entry.target.className = "transition";
+                    observer.unobserve(entry.target);
+                }
+            },
+            {
+                threshold: 1
+            }
+        )
+    }, []);
 
     return (
         <section id="Hobbies">
@@ -20,10 +81,15 @@ export default function Hobbies() {
                     perferendis quae qui quia quibusdam, quo quod recusandae repudiandae sed sint temporibus.
                 </p>
                 <div className="collage css-arts">
-                    <div><CSSArt name="Eye" image="eye"/></div>
-                    <div><CSSArt name="Santa" image="santa"/></div>
-                    <div><CSSArt name="Red" image="red"/></div>
-                    <div><CSSArt name="Butterfly" image="butterfly"/></div>
+                    {cssArts.map(el =>
+                        <div
+                            className={`transition ${el.animationClass}`}
+                            ref={(ref) => imageRefs.current!.push(ref as HTMLElement)}
+                            key={el.name}
+                        >
+                            <CSSArt name={el.name} image={el.image}/>
+                        </div>
+                    )}
                 </div>
             </article>
             <article className="hobby">
@@ -34,11 +100,15 @@ export default function Hobbies() {
                     perferendis quae qui quia quibusdam, quo quod recusandae repudiandae sed sint temporibus.
                 </p>
                 <div className="collage digital-paintings">
-                    <div><DigitalPainting name="Shuktikam" image="shuktikam"/></div>
-                    <div><DigitalPainting name="Girl and the Cat" image="girl-and-the-cat"/></div>
-                    <div><DigitalPainting name="Dawn" image="dawn"/></div>
-                    <div><DigitalPainting name="Swirl" image="swirl"/></div>
-                    <div><DigitalPainting name="Flower" image="flower"/></div>
+                    {digitalPaintings.map(el =>
+                        <div
+                            className={`transition ${el.animationClass}`}
+                            ref={(ref) => imageRefs.current!.push(ref as HTMLElement)}
+                            key={el.name}
+                        >
+                            <DigitalPainting name={el.name} image={el.image}/>
+                        </div>
+                    )}
                 </div>
             </article>
         </section>
