@@ -18,7 +18,7 @@ export default function Skills() {
                 }
             },
             {
-                threshold: 0.1
+                threshold: 0.5
             },
             (element, index) => {
                 element.style.transitionDelay = `${index * 250}ms`;
