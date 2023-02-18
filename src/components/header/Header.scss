@@ -33,22 +33,6 @@
         }
       }
 
-      .nav-btn {
-        outline-color: transparent;
-        border: none;
-        transition-duration: 100ms;
-        background-color: transparent;
-        display: grid;
-
-        span {
-          font-size: xx-large;
-        }
-
-        &:has(:focus, :active) {
-          transform: scale(0.8);
-        }
-      }
-
       nav {
         display: none;
       }
@@ -126,10 +110,6 @@
           gap: 1rem;
         }
       }
-    }
-
-    .nav-popup {
-      display: none;
     }
   }
 }

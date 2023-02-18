@@ -1,5 +1,6 @@
 import "./Header.scss";
 import {useEffect, useRef, useState} from "react";
+import NavButton from "./nav-button/NavButton";
 
 export default function Header() {
     type anchor = {
@@ -32,7 +33,7 @@ export default function Header() {
     const navPopup = useRef<HTMLDivElement | null>(null);
     const popupOverlay = useRef<HTMLDivElement | null>(null);
     const [navPopupOpened, setNavPopupOpened] = useState<boolean>(false);
-    const animationStarts = 6000;
+    const animationStarts = 0;
 
     useEffect(() => {
         navPopup.current!.classList.toggle('open', navPopupOpened);
@@ -51,9 +52,7 @@ export default function Header() {
                     <a href="/#Landing">
                         <h1>Shuktika<span>.</span></h1>
                     </a>
-                    <button className="nav-btn transition" onClick={closeNavPopup}>
-                        <span className="material-icons-round">menu</span>
-                    </button>
+                    <NavButton open={navPopupOpened} onClick={closeNavPopup}/>
                     <nav>
                         {anchors.map((anchor, index) => {
                             return (

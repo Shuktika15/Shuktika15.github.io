@@ -1,0 +1,32 @@
+#NavButton {
+  display: grid;
+  outline-color: transparent;
+  border: none;
+  position: relative;
+  width: 1.75rem;
+  height: 0.75rem;
+
+  div {
+    width: 1.75rem;
+    height: 0.2rem;
+    background-color: var(--secondar-color);
+    border-radius: 0.2rem;
+    transition: var(--fast-transition);
+    position: absolute;
+    transform-origin: center;
+
+    &:first-child {
+      top: 0;
+    }
+
+    &:last-child {
+      bottom: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 45rem) {
+  #NavButton {
+    display: none;
+  }
+}
