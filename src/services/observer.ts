@@ -9,7 +9,7 @@ export default function userObserver<T extends HTMLElement>(
             const entry = entries[i];
             observationCallback(entry, observer, i);
         }
-    });
+    }, options);
 
     for (let i = 0; i < elements.length; i++) {
         const element = elements[i];
