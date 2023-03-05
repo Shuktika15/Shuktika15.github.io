@@ -89,6 +89,7 @@
     inset: 0;
     display: none;
     background: rgba(var(--dark-color), 0.1);
+    backdrop-filter: blur(1px);
   }
 
   .overlay-visible {
