@@ -33,7 +33,7 @@ export default function Header() {
     const navPopup = useRef<HTMLDivElement | null>(null);
     const popupOverlay = useRef<HTMLDivElement | null>(null);
     const [navPopupOpened, setNavPopupOpened] = useState<boolean>(false);
-    const animationStarts = 0;
+    const animationStarts = 6000;
 
     useEffect(() => {
         navPopup.current!.classList.toggle('open', navPopupOpened);
