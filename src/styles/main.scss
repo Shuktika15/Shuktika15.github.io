@@ -20,6 +20,15 @@
   --fast-transition: 200ms ease-out;
   --medium-transition: 500ms ease-out;
   --slow-transition: 1s ease-out;
+  --h1-font-size: 1.5rem;
+  --h3-font-size: 1.25rem;
+  --p-font-size: 1rem;
+  --h1-font-family: var(--mulish);
+  --h3-font-family: var(--merriweather);
+  --h4-font-family: var(--mulish);
+  --p-font-family: var(--delius);
+  --section-gap: 1rem;
+  --article-gap: 0.75rem;
 }
 
 .dark-theme {
@@ -44,19 +53,22 @@ body {
 }
 
 h1 {
-  font-family: var(--mulish);
+  font-size: var(--h1-font-size);
+  font-family: var(--h1-font-family);
 }
 
 h3 {
-  font-family: var(--merriweather);
+  font-size: var(--h3-font-size);
+  font-family: var(--h3-font-family);
 }
 
 h4 {
-  font-family: var(--mulish)
+  font-family: var(--h4-font-family)
 }
 
 p {
-  font-family: var(--delius);
+  font-size: var(--p-font-size);
+  font-family: var(--p-font-family);
   font-weight: 500;
 }
 
@@ -96,17 +108,38 @@ main {
 
 section {
   display: grid;
-  gap: 1rem;
+  gap: var(--section-gap);
 }
 
 article {
   display: grid;
-  gap: 0.75rem;
+  gap: var(--article-gap);
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+input, textarea {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  border: none;
+  outline: 0.1rem solid rgba(var(--dark-color), 0.1);
+  border-radius: 0.25rem;
+  background-color: rgb(var(--light-color));
+  font-size: var(--p-font-size);
+  font-family: var(--p-font-family);
+  transition: var(--fast-transition);
+
+  &:is(:focus, :active) {
+    outline-color: var(--accent-color);
+    box-shadow: var(--shadow);
+  }
+}
+
+textarea {
+  resize: vertical;
 }
 
 @mixin tooltip-position($position: bottom) {
@@ -226,20 +259,14 @@ img {
 }
 
 @media screen and (min-width: 45rem) {
+  :root {
+    --h1-font-size: 2rem;
+    --h3-font-size: 1.5rem;
+    --p-font-size: 1.25rem;
+  }
+
   html {
     scroll-padding: 5.5rem;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  h3 {
-    font-size: 1.5rem;
-  }
-
-  p {
-    font-size: 1.25rem;
   }
 
   .material-icons-round {
@@ -274,7 +301,7 @@ img {
     align-items: start;
   }
 
-  #Landing, #AboutMe, #Skills, #Projects, #Hobbies {
+  #Landing, #AboutMe, #Skills, #Projects, #Hobbies, #Contact {
     grid-column: 1 / -1;
   }
 
@@ -295,6 +322,13 @@ img {
 }
 
 @media screen and (min-width: 75rem) {
+  :root {
+    --section-gap: 1.5rem;
+    --h1-font-size: 2.5rem;
+    --h3-font-size: 1.5rem;
+    --article-gap: 1rem;
+  }
+
   .container {
     padding: 0 4rem;
     max-width: 75rem;
@@ -302,21 +336,5 @@ img {
 
   main {
     gap: 3rem;
-  }
-
-  section {
-    gap: 1.5rem;
-  }
-
-  article {
-    gap: 1rem;
-  }
-
-  h1 {
-    font-size: 2.5rem;
-  }
-
-  h3 {
-    font-size: 1.5rem;
   }
 }
