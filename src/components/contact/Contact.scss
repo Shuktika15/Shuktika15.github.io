@@ -1,0 +1,31 @@
+#Contact {
+  h1 {
+    text-align: center;
+  }
+
+  form {
+    max-width: 45rem;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--section-gap);
+
+    textarea {
+      min-height: 10rem;
+    }
+  }
+}
+
+@media screen and (min-width: 45rem) {
+  #Contact {
+    form {
+      grid-template-columns: repeat(2, 1fr);
+
+      input[name="subject"], textarea[name="content"] {
+        grid-column: 1/-1;
+        font-family: var(--mulish);
+      }
+    }
+  }
+}

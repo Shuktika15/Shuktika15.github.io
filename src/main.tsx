@@ -11,6 +11,7 @@ import Projects from "./components/projects/Projects";
 import Hobbies from "./components/hobbies/Hobbies";
 import InitialLoading from "./components/initial-loading/InitialLoading";
 import Footer from "./components/footer/Footer";
+import Contact from "./components/contact/Contact";
 
 function App() {
     return (
@@ -26,6 +27,7 @@ function App() {
                     <Educations/>
                     <Projects/>
                     <Hobbies/>
+                    <Contact/>
                 </main>
             </div>
             <Footer/>
