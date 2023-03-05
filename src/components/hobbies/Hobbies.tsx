@@ -65,7 +65,7 @@ export default function Hobbies() {
                 }
             },
             {
-                threshold: 1
+                threshold: 0.5
             }
         )
     }, []);
