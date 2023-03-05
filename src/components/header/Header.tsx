@@ -28,6 +28,10 @@ export default function Header() {
         {
             title: 'Hobbies',
             href: 'Hobbies'
+        },
+        {
+            title: 'Contact',
+            href: 'Contact'
         }
     ];
     const navPopup = useRef<HTMLDivElement | null>(null);
