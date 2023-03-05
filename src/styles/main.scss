@@ -97,13 +97,29 @@ main {
 
 .btn {
   width: max-content;
-  background-color: var(--accent-color);
-  color: var(--primary-color);
-  padding: 1.25rem 1.5rem;
+  padding: 0.75rem 1rem;
   border: none;
-  border-radius: 1rem;
-  font-size: 1rem;
-  font-weight: 600;
+  outline-color: transparent;
+  border-radius: 0.5rem;
+  font-size: var(--p-font-size);
+  font-family: var(--mulish);
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  transition: var(--fast-transition);
+  color: rgba(var(--light-color));
+  background-color: var(--accent-color);
+  box-shadow: var(--shadow);
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &:disabled {
+    box-shadow: none;
+    transform: scale(1);
+    filter: grayscale(100%) opacity(50%);
+  }
 }
 
 section {
@@ -135,6 +151,12 @@ input, textarea {
   &:is(:focus, :active) {
     outline-color: var(--accent-color);
     box-shadow: var(--shadow);
+  }
+
+  &:disabled {
+    outline-color: transparent;
+    box-shadow: none;
+    filter: opacity(0.5);
   }
 }
 
