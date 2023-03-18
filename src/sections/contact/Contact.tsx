@@ -1,8 +1,9 @@
 import "./Contact.scss";
-import React, {FormEvent, useState} from "react";
 import {EmailRequest} from "../../type";
 import AutorenewIcon from "../../components/icons/autorenew-icon";
 import VerifiedIcon from "../../components/icons/verified-icon";
+import {useEffect, useRef, useState} from "preact/compat";
+
 
 enum SendEmailState {
     INITIAL_STATE,
@@ -12,9 +13,16 @@ enum SendEmailState {
 }
 
 export default function Contact() {
+    const emailForm = useRef<HTMLFormElement | null>(null);
     const [sendEmailState, setSendEmailState] = useState<SendEmailState>(SendEmailState.INITIAL_STATE);
 
-    async function sendEmail(event: FormEvent<HTMLFormElement>) {
+    useEffect(() => {
+        emailForm.current!.onsubmit = async (e: SubmitEvent) => {
+            await sendEmail(e);
+        }
+    });
+
+    async function sendEmail(event: SubmitEvent) {
         event.preventDefault();
 
         if (sendEmailState === SendEmailState.SENT_STATE) {
@@ -98,12 +106,12 @@ export default function Contact() {
     return (
         <section id="Contact">
             <h1>Contact</h1>
-            <form autoComplete="on" onSubmit={sendEmail}>
+            <form autoComplete="on" ref={emailForm}>
                 <input
                     type="text"
                     name="name"
                     placeholder="Name"
-                    spellCheck="false"
+                    spellCheck={false}
                     autoComplete="on"
                     disabled={disableInput(sendEmailState)}
                     required
@@ -112,7 +120,7 @@ export default function Contact() {
                     type="email"
                     name="email"
                     placeholder="Email"
-                    spellCheck="false"
+                    spellCheck={false}
                     autoComplete="on"
                     disabled={disableInput(sendEmailState)}
                     required

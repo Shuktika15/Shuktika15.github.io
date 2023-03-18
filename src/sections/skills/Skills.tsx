@@ -1,7 +1,7 @@
 import "./Skills.scss";
 import {Data, Skill} from "../../data";
-import {useEffect, useRef} from "react";
 import userObserver from "../../services/observer";
+import {useEffect, useRef} from "preact/compat";
 
 export default function Skills() {
     const skills: Skill[] = Data.skills;

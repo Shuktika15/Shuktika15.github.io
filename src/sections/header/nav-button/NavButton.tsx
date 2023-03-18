@@ -1,5 +1,5 @@
 import "./NavButton.scss";
-import {useEffect, useRef} from "react";
+import {useEffect, useRef} from "preact/compat";
 
 export interface NavButtonProps {
     open: boolean;

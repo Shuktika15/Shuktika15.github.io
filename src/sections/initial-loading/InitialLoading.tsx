@@ -1,5 +1,5 @@
 import "./InitialLoading.scss";
-import {useEffect, useRef} from "react";
+import {useEffect, useRef} from "preact/compat";
 
 export default function InitialLoading() {
     const initialLoadingDiv = useRef<HTMLDivElement | null>(null);

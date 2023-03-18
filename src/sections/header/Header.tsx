@@ -1,6 +1,6 @@
 import "./Header.scss";
-import {useEffect, useRef, useState} from "react";
 import NavButton from "./nav-button/NavButton";
+import {useEffect, useRef, useState} from "preact/compat";
 
 export default function Header() {
     type anchor = {

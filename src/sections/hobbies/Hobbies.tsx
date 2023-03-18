@@ -1,6 +1,6 @@
 import "./Hobbies.scss";
-import {useEffect, useRef} from "react";
 import userObserver from "../../services/observer";
+import {useEffect, useRef} from "preact/compat";
 
 export default function Hobbies() {
     type ImageProp = { name: string, image: string };

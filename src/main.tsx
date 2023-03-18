@@ -1,5 +1,4 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import {render} from "preact";
 import './styles/main.scss'
 import Header from "./sections/header/Header";
 import Landing from "./sections/landing/Landing";
@@ -35,8 +34,4 @@ function App() {
     )
 }
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-    <React.StrictMode>
-        <App/>
-    </React.StrictMode>,
-)
+render(<App/>, document.getElementById('app') as HTMLElement);

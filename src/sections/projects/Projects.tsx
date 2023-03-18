@@ -1,9 +1,9 @@
 import "./Projects.scss";
 import {Data, Project} from "../../data";
-import {useEffect, useRef} from "react";
 import userObserver from "../../services/observer";
 import useTilt from "../../services/tilt";
 import GitHubIcon from "../../components/icons/github-icon";
+import {useEffect, useRef} from "preact/compat";
 
 export default function Projects() {
     const projects: Project[] = Data.projects;

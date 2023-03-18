@@ -1,4 +1,4 @@
-import {CSSProperties} from "react";
+import {CSSProperties} from "preact/compat";
 
 export default interface IconProps {
     className?: string;

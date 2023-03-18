@@ -1,7 +1,7 @@
 import "./Landing.scss";
-import React, {useEffect, useRef} from "react";
 import NavigateNextIcon from "../../components/icons/navigate-next-icon";
 import FileDownloadIcon from "../../components/icons/file-download-icon";
+import {useEffect, useRef} from "preact/compat";
 
 export default function Landing() {
     let profiles = useRef(null);
