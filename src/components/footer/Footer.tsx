@@ -5,7 +5,7 @@ export default function Footer() {
         <div id="Footer">
             <div className="container">
                 <footer>
-                    <p>Copyright &#169; {new Date().getFullYear()} Shuktika Mahanty</p>
+                    <p>Copyright &#169; {new Date().getFullYear()} Shuktika</p>
                 </footer>
             </div>
         </div>
