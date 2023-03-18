@@ -78,7 +78,7 @@ export default function NavButton(props: NavButtonProps) {
     }, [props.open]);
 
     return (
-        <button id="NavButton" onClick={props.onClick}>
+        <button id="NavButton" onClick={props.onClick} aria-label="nav">
             <div ref={firstLine}></div>
             <div ref={lastLine}></div>
         </button>
