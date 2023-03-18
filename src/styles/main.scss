@@ -223,6 +223,11 @@ textarea {
   @include tooltip-position('top');
 }
 
+.error-text {
+  font-family: monospace;
+  color: #e7593e;
+}
+
 .material-icons-round {
   font-size: 1.25rem;
 }
