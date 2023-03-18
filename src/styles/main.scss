@@ -124,6 +124,14 @@ main {
     transform: scale(1);
     filter: grayscale(100%) opacity(50%);
   }
+
+  svg {
+    fill: rgba(var(--light-color));
+  }
+
+  .icon {
+    height: var(--p-font-size);
+  }
 }
 
 section {
@@ -232,8 +240,9 @@ textarea {
   color: #e7593e;
 }
 
-.material-icons-round {
-  font-size: 1.25rem;
+.icon {
+  height: 1.25rem;
+  aspect-ratio: 1;
 }
 
 .bg-light {
@@ -300,8 +309,9 @@ textarea {
     scroll-padding: 5.5rem;
   }
 
-  .material-icons-round {
-    font-size: 1.5rem;
+  .icon {
+    height: 1.5rem;
+    aspect-ratio: 1;
   }
 }
 

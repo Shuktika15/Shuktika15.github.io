@@ -1,6 +1,8 @@
 import "./Contact.scss";
 import React, {FormEvent, useState} from "react";
 import {EmailRequest} from "../../type";
+import AutorenewIcon from "../../components/icons/autorenew-icon";
+import VerifiedIcon from "../../components/icons/verified-icon";
 
 enum SendEmailState {
     INITIAL_STATE,
@@ -72,9 +74,9 @@ export default function Contact() {
             case SendEmailState.INITIAL_STATE:
                 return <></>;
             case SendEmailState.SENDING_STATE:
-                return <span className="material-icons-round spin">autorenew</span>;
+                return <AutorenewIcon className="spin"/>;
             case SendEmailState.SENT_STATE:
-                return <span className="material-icons-round">verified</span>;
+                return <VerifiedIcon/>;
             case SendEmailState.ERROR_STATE:
                 return <></>;
         }

@@ -1,5 +1,7 @@
 import "./Landing.scss";
 import React, {useEffect, useRef} from "react";
+import NavigateNextIcon from "../../components/icons/navigate-next-icon";
+import FileDownloadIcon from "../../components/icons/file-download-icon";
 
 export default function Landing() {
     let profiles = useRef(null);
@@ -101,10 +103,10 @@ export default function Landing() {
                 </div>
                 <a href="/documents/resume.pdf" target="_blank" className="download-resume color-accent">
                     <p style={{animationDelay: `${animationStart + 4.5}s`}}>Download Resume</p>
-                    <span
-                        className="download-arrow material-icons-round fade-in"
+                    <NavigateNextIcon
+                        className="download-arrow fade-in"
                         style={{animationDelay: `${animationStart + 4}s`, animationDuration: '500ms'}}
-                    >navigate_next</span>
+                    />
                 </a>
             </div>
             <a
@@ -115,7 +117,7 @@ export default function Landing() {
                 data-tooltip-position="left"
                 ref={resumeBtn}
             >
-                <span className="material-icons-round">file_download</span>
+                <FileDownloadIcon/>
             </a>
         </section>
     )

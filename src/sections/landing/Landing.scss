@@ -78,9 +78,11 @@
       }
 
       .download-arrow {
-        font-size: 1.75rem;
+        height: 1.75rem;
+        aspect-ratio: 1;
         margin-top: -1.5px;
         margin-left: -0.5rem;
+        fill: var(--accent-color);
       }
     }
   }
@@ -98,8 +100,10 @@
     z-index: 100;
     box-shadow: var(--shadow);
 
-    span {
-      font-size: 1.5rem;
+    svg {
+      height: 1.5rem;
+      aspect-ratio: 1;
+      fill: rgb(var(--light-color));
     }
   }
 
@@ -117,9 +121,10 @@
     .myself {
       .download-resume {
         .download-arrow {
-          font-size: 2.25rem;
-          margin-top: 0.01rem;
+          height: 2.25rem;
+          aspect-ratio: 1;
           margin-left: -0.75rem;
+          margin-top: 0.01rem;
         }
       }
     }
@@ -150,8 +155,8 @@
 
       .download-resume {
         .download-arrow {
-          font-size: 2.25rem;
-          margin-top: 0.01rem;
+          height: 2.25rem;
+          aspect-ratio: 1;
           margin-left: -0.75rem;
         }
       }
@@ -164,7 +169,7 @@
       bottom: 1.75rem;
 
       span {
-        font-size: 1.75rem;
+        height: 1.75rem;
       }
     }
   }
@@ -186,9 +191,12 @@
         line-height: 2rem;
       }
 
-      .download-arrow {
-        font-size: 2.75rem;
-        margin-left: -1rem;
+      .download-resume {
+        .download-arrow {
+          height: 2.25rem;
+          aspect-ratio: 1;
+          margin-top: 0.01rem;
+        }
       }
 
       .socials {
@@ -211,8 +219,8 @@
       right: 2rem;
       bottom: 2rem;
 
-      span {
-        font-size: 2rem;
+      svg {
+        height: 2rem;
       }
     }
 

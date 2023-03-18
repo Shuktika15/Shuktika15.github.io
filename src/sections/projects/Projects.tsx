@@ -3,6 +3,7 @@ import {Data, Project} from "../../data";
 import {useEffect, useRef} from "react";
 import userObserver from "../../services/observer";
 import useTilt from "../../services/tilt";
+import GitHubIcon from "../../components/icons/github-icon";
 
 export default function Projects() {
     const projects: Project[] = Data.projects;
@@ -46,7 +47,7 @@ export default function Projects() {
                             loading="lazy"
                         />
                         <a href={project.github} target="_blank" className="github">
-                            <span className="material-icons-round">code</span>
+                            <GitHubIcon/>
                         </a>
                     </div>
                     <div className="card-body">
