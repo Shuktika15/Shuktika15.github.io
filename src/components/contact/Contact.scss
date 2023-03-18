@@ -16,8 +16,17 @@
     }
 
     .btn {
+      transition: var(--fast-transition);
       width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
     }
+  }
+
+  .error-text {
+    text-align: center;
   }
 }
 
