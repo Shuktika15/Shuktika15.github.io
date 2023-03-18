@@ -143,6 +143,20 @@
   transform: perspective(1000px) rotateY(-90deg) !important;
 }
 
+.spin {
+  animation: spin linear 1.5s forwards infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @media (prefers-reduced-motion) {
   .fade-in {
     opacity: initial;
@@ -181,5 +195,9 @@
   .fade-in-slide-in {
     animation: none;
     left: 0;
+  }
+
+  .spin {
+    animation: none;
   }
 }
