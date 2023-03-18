@@ -50,6 +50,7 @@ export default function Header() {
 
     return (
         <div id="Header">
+            <a href="/#AboutMe" className="skip-nav">Skip navigation</a>
             <div className="overlay" ref={popupOverlay} onClick={closeNavPopup}></div>
             <header className="rotate-y" style={{animationDelay: `${animationStarts}ms`}}>
                 <div className="container">

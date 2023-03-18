@@ -3,6 +3,24 @@
   position: fixed;
   z-index: 1;
 
+  .skip-nav {
+    $border: 0.1rem solid var(--accent-color);
+    position: absolute;
+    padding: 0.75rem 0.5rem;
+    background-color: rgba(var(--light-color));
+    color: rgba(var(--dark-color));
+    border-right: $border;
+    border-bottom: $border;
+    border-radius: 0 0 0.5rem 0;
+    z-index: 3;
+    transform: translate(-100%, -100%);
+    transition: var(--fast-transition);
+  }
+
+  .skip-nav:focus {
+    transform: translate(0, 0);
+  }
+
   a {
     text-decoration: none;
   }
