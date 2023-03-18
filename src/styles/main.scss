@@ -114,6 +114,7 @@ main {
   color: rgba(var(--light-color));
   background-color: var(--accent-color);
   box-shadow: var(--shadow);
+  cursor: pointer;
 
   &:active {
     transform: scale(0.95);
@@ -123,6 +124,7 @@ main {
     box-shadow: none;
     transform: scale(1);
     filter: grayscale(100%) opacity(50%);
+    cursor: not-allowed;
   }
 
   svg {
@@ -166,14 +168,18 @@ input, textarea {
   }
 
   &:disabled {
-    outline-color: transparent;
     box-shadow: none;
     filter: opacity(0.5);
+    cursor: not-allowed;
   }
 }
 
 textarea {
   resize: vertical;
+
+  &:disabled {
+    resize: none;
+  }
 }
 
 @mixin tooltip-position($position: bottom) {
