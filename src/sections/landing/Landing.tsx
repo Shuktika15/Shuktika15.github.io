@@ -103,10 +103,15 @@ export default function Landing() {
                 </div>
                 <a href="/documents/resume.pdf" target="_blank" className="download-resume color-accent">
                     <p style={{animationDelay: `${animationStart + 4.5}s`}}>Download Resume</p>
-                    <NavigateNextIcon
-                        className="download-arrow fade-in"
-                        style={{animationDelay: `${animationStart + 4}s`, animationDuration: '500ms'}}
-                    />
+                    <div
+                        className="icon-wrapper wiggle-right"
+                        style={{animationDelay: `${animationStart + 5}s`}}
+                    >
+                        <NavigateNextIcon
+                            className="download-arrow fade-in"
+                            style={{animationDelay: `${animationStart + 4}s`, animationDuration: '500ms'}}
+                        />
+                    </div>
                 </a>
             </div>
             <a

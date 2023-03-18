@@ -61,6 +61,8 @@
         white-space: nowrap;
         animation: expand-horizontal 500ms ease-out forwards;
         cursor: pointer;
+        font-family: var(--h3-font-family);
+        letter-spacing: 1px;
       }
 
       @keyframes expand-horizontal {
@@ -69,7 +71,7 @@
         }
 
         to {
-          width: 16ch;
+          width: 18ch;
         }
       }
 
@@ -77,10 +79,15 @@
         animation: none;
       }
 
+      .icon-wrapper {
+        display: grid;
+        place-items: center;
+        width: max-content;
+      }
+
       .download-arrow {
         height: 1.75rem;
         aspect-ratio: 1;
-        margin-top: -1.5px;
         margin-left: -0.5rem;
         fill: var(--accent-color);
       }
@@ -116,6 +123,19 @@
   }
 }
 
+@media screen and (max-width: 45rem) {
+  #Landing {
+    .myself {
+      .download-resume {
+
+        p {
+          margin-top: 0.05rem;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (min-width: 45rem) and (max-width: 64rem) {
   #Landing {
     .myself {
@@ -124,7 +144,6 @@
           height: 2.25rem;
           aspect-ratio: 1;
           margin-left: -0.75rem;
-          margin-top: 0.01rem;
         }
       }
     }
@@ -195,7 +214,6 @@
         .download-arrow {
           height: 2.25rem;
           aspect-ratio: 1;
-          margin-top: 0.01rem;
         }
       }
 

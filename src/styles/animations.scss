@@ -157,6 +157,20 @@
   }
 }
 
+.wiggle-right {
+  animation: wiggle-right 800ms ease-out forwards alternate infinite;
+}
+
+@keyframes wiggle-right {
+  from {
+    margin-left: 0;
+  }
+
+  to {
+    margin-left: 0.5rem;
+  }
+}
+
 @media (prefers-reduced-motion) {
   .fade-in {
     opacity: initial;
@@ -199,5 +213,9 @@
 
   .spin {
     animation: none;
+  }
+
+  .wiggle-right {
+    animation: 0;
   }
 }
