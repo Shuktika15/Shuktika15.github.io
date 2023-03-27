@@ -1,6 +1,6 @@
-import {CSSProperties} from "preact/compat";
+import { type CSSProperties } from 'preact/compat'
 
 export default interface IconProps {
-    className?: string;
-    style?: CSSProperties;
+  className?: string
+  style?: CSSProperties
 }

@@ -1,129 +1,151 @@
-import "./Landing.scss";
-import NavigateNextIcon from "../../components/icons/navigate-next-icon";
-import FileDownloadIcon from "../../components/icons/file-download-icon";
-import {useEffect, useRef} from "preact/compat";
+import './Landing.scss'
+import NavigateNextIcon from '../../components/icons/navigate-next-icon'
+import FileDownloadIcon from '../../components/icons/file-download-icon'
+import { useEffect, useRef } from 'preact/compat'
+import { type JSX } from 'preact'
 
-export default function Landing() {
-    let profiles = useRef(null);
-    let resumeBtn = useRef<HTMLAnchorElement | null>(null);
-    const animationStart = 6;
+export default function Landing (): JSX.Element {
+  const profiles = useRef<HTMLDivElement | null>(null)
+  const resumeBtn = useRef<HTMLAnchorElement | null>(null)
+  const animationStart = 6
 
-    useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-            for (const entry of entries) {
-                resumeBtn.current?.classList.toggle("appear", !entry.isIntersecting);
-            }
-        }, {
-            threshold: 1
-        });
-        observer.observe(profiles.current!);
-    }, []);
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        resumeBtn.current?.classList.toggle('appear', !entry.isIntersecting)
+      }
+    }, {
+      threshold: 1
+    })
+    if (profiles.current !== null) observer.observe(profiles.current)
+  }, [])
 
-    return (
-        <section id="Landing">
-            <div className="blank"></div>
-            <img
-                src="/images/me.webp"
-                alt="Me"
-                className="portrait fade-in-expand"
-                style={{animationDelay: `${animationStart}s`}}
+  return (
+    <section id="Landing">
+      <div className="blank"></div>
+      <img
+        src="/images/me.webp"
+        alt="Me"
+        className="portrait fade-in-expand"
+        style={{ animationDelay: `${animationStart}s` }}
+      />
+      <div className="myself">
+        <h1 className="slide-in" style={{ animationDelay: `${animationStart + 0.5}s` }}>
+          Hey I'm
+          <br/>
+          Shuktika Mahanty
+        </h1>
+        <p className="introduction reveal-vertical" style={{ animationDelay: `${animationStart + 1.5}s` }}>
+          I'm a full stack developer committed to achieving exceptional results through my passion for coding.
+          My well-rounded expertise enable me to deliver efficient projects that meet the
+          desired specifications.
+        </p>
+        <div className="socials" ref={profiles}>
+          <a
+            href="https://github.com/Shuktika15"
+            aria-label="GitHub"
+            className="fade-in"
+            style={{
+              animationDelay: `${animationStart + 2.5}s`,
+              animationDuration: '200ms'
+            }}
+            data-tooltip="GitHub"
+            target="_blank" rel="noreferrer"
+          >
+            <img src="/icons/github.svg" alt="GitHub"/>
+          </a>
+          <a
+            href="https://in.linkedin.com/in/shuktika-mahanty"
+            aria-label="LinkedIn"
+            className="fade-in"
+            style={{
+              animationDelay: `${animationStart + 2.7}s`,
+              animationDuration: '200ms'
+            }}
+            data-tooltip="LinkedIn"
+            target="_blank" rel="noreferrer"
+          >
+            <img src="/icons/linkedin.svg" alt="LinkedIn"/>
+          </a>
+          <a
+            href="https://www.facebook.com/ShuktikaMahanty"
+            aria-label="Facebook"
+            className="fade-in"
+            style={{
+              animationDelay: `${animationStart + 2.9}s`,
+              animationDuration: '200ms'
+            }}
+            data-tooltip="Facebook"
+            target="_blank" rel="noreferrer"
+          >
+            <img src="/icons/facebook.svg" alt="Facebook"/>
+          </a>
+          <a
+            href="https://www.instagram.com/shuktikamahanty"
+            aria-label="Instagram"
+            className="fade-in"
+            style={{
+              animationDelay: `${animationStart + 3.1}s`,
+              animationDuration: '200ms'
+            }}
+            data-tooltip="Instagram"
+            target="_blank" rel="noreferrer"
+          >
+            <img src="/icons/instagram.svg" alt="Instagram"/>
+          </a>
+          <a
+            href="https://pinterest.com/shuktikam"
+            aria-label="Pinterest"
+            className="fade-in"
+            style={{
+              animationDelay: `${animationStart + 3.3}s`,
+              animationDuration: '200ms'
+            }}
+            data-tooltip="Pinterest"
+            target="_blank" rel="noreferrer"
+          >
+            <img src="/icons/pinterest.svg" alt="Pinterest"/>
+          </a>
+          <a
+            href="https://leetcode.com/shukti"
+            aria-label="LeetCode"
+            className="fade-in"
+            style={{
+              animationDelay: `${animationStart + 3.5}s`,
+              animationDuration: '200ms'
+            }}
+            data-tooltip="LeetCode"
+            target="_blank" rel="noreferrer"
+          >
+            <img src="/icons/leetcode.svg" alt="LeetCode"/>
+          </a>
+        </div>
+        <a href="/documents/resume.pdf" target="_blank" className="download-resume color-accent">
+          <p style={{ animationDelay: `${animationStart + 4.5}s` }}>Download Resume</p>
+          <div
+            className="icon-wrapper wiggle-right"
+            style={{ animationDelay: `${animationStart + 5}s` }}
+          >
+            <NavigateNextIcon
+              className="download-arrow fade-in"
+              style={{
+                animationDelay: `${animationStart + 4}s`,
+                animationDuration: '500ms'
+              }}
             />
-            <div className="myself">
-                <h1 className="slide-in" style={{animationDelay: `${animationStart + 0.5}s`}}>
-                    Hey I'm
-                    <br/>
-                    Shuktika Mahanty
-                </h1>
-                <p className="introduction reveal-vertical" style={{animationDelay: `${animationStart + 1.5}s`}}>
-                    I'm a full stack developer committed to achieving exceptional results through my passion for coding.
-                    My well-rounded expertise enable me to deliver efficient projects that meet the
-                    desired specifications.
-                </p>
-                <div className="socials" ref={profiles}>
-                    <a
-                        href="https://github.com/Shuktika15"
-                        aria-label="GitHub"
-                        className="fade-in"
-                        style={{animationDelay: `${animationStart + 2.5}s`, animationDuration: '200ms'}}
-                        data-tooltip="GitHub"
-                        target="_blank"
-                    >
-                        <img src="/icons/github.svg" alt="GitHub"/>
-                    </a>
-                    <a
-                        href="https://in.linkedin.com/in/shuktika-mahanty"
-                        aria-label="LinkedIn"
-                        className="fade-in"
-                        style={{animationDelay: `${animationStart + 2.7}s`, animationDuration: '200ms'}}
-                        data-tooltip="LinkedIn"
-                        target="_blank"
-                    >
-                        <img src="/icons/linkedin.svg" alt="LinkedIn"/>
-                    </a>
-                    <a
-                        href="https://www.facebook.com/ShuktikaMahanty"
-                        aria-label="Facebook"
-                        className="fade-in"
-                        style={{animationDelay: `${animationStart + 2.9}s`, animationDuration: '200ms'}}
-                        data-tooltip="Facebook"
-                        target="_blank"
-                    >
-                        <img src="/icons/facebook.svg" alt="Facebook"/>
-                    </a>
-                    <a
-                        href="https://www.instagram.com/shuktikamahanty"
-                        aria-label="Instagram"
-                        className="fade-in"
-                        style={{animationDelay: `${animationStart + 3.1}s`, animationDuration: '200ms'}}
-                        data-tooltip="Instagram"
-                        target="_blank"
-                    >
-                        <img src="/icons/instagram.svg" alt="Instagram"/>
-                    </a>
-                    <a
-                        href="https://pinterest.com/shuktikam"
-                        aria-label="Pinterest"
-                        className="fade-in"
-                        style={{animationDelay: `${animationStart + 3.3}s`, animationDuration: '200ms'}}
-                        data-tooltip="Pinterest"
-                        target="_blank"
-                    >
-                        <img src="/icons/pinterest.svg" alt="Pinterest"/>
-                    </a>
-                    <a
-                        href="https://leetcode.com/shukti"
-                        aria-label="LeetCode"
-                        className="fade-in"
-                        style={{animationDelay: `${animationStart + 3.5}s`, animationDuration: '200ms'}}
-                        data-tooltip="LeetCode"
-                        target="_blank"
-                    >
-                        <img src="/icons/leetcode.svg" alt="LeetCode"/>
-                    </a>
-                </div>
-                <a href="/documents/resume.pdf" target="_blank" className="download-resume color-accent">
-                    <p style={{animationDelay: `${animationStart + 4.5}s`}}>Download Resume</p>
-                    <div
-                        className="icon-wrapper wiggle-right"
-                        style={{animationDelay: `${animationStart + 5}s`}}
-                    >
-                        <NavigateNextIcon
-                            className="download-arrow fade-in"
-                            style={{animationDelay: `${animationStart + 4}s`, animationDuration: '500ms'}}
-                        />
-                    </div>
-                </a>
-            </div>
-            <a
-                href="/documents/resume.pdf"
-                target="_blank"
-                className="download-resume-fab transition disappear"
-                data-tooltip="Download Resume"
-                data-tooltip-position="left"
-                ref={resumeBtn}
-            >
-                <FileDownloadIcon/>
-            </a>
-        </section>
-    )
+          </div>
+        </a>
+      </div>
+      <a
+        href="/documents/resume.pdf"
+        target="_blank"
+        className="download-resume-fab transition disappear"
+        data-tooltip="Download Resume"
+        data-tooltip-position="left"
+        ref={resumeBtn}
+      >
+        <FileDownloadIcon/>
+      </a>
+    </section>
+  )
 }
