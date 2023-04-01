@@ -19,11 +19,28 @@ export default function Contact (): JSX.Element {
   useEffect((): void => {
     if (emailForm.current === null) return
     emailForm.current.onsubmit = async (e: SubmitEvent) => {
-      await sendEmail(e)
+      await onsubmit(e)
     }
   })
 
-  async function sendEmail (event: SubmitEvent): Promise<void> {
+  async function sendEmail (sendEmailRequest: EmailRequest): Promise<void> {
+    const response = await fetch(
+      'http://localhost:8080/api/sendMail',
+      {
+        method: 'POST',
+        body: JSON.stringify(sendEmailRequest),
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+          Accept: 'application/json'
+        }
+      }
+    )
+    if (!response.ok) {
+      throw Error(response.statusText)
+    }
+  }
+
+  async function onsubmit (event: SubmitEvent): Promise<void> {
     event.preventDefault()
 
     if (sendEmailState === SendEmailState.SENT_STATE) {
@@ -45,24 +62,11 @@ export default function Contact (): JSX.Element {
     setSendEmailState(SendEmailState.SENDING_STATE)
 
     try {
-      const response = await fetch(
-        'http://localhost:8080/api/sendMail',
-        {
-          method: 'POST',
-          body: JSON.stringify(sendEmailRequest),
-          headers: {
-            'Content-type': 'application/json; charset=UTF-8',
-            Accept: 'application/json'
-          }
-        }
-      )
-      const responseBody = await response.json()
-      console.log(responseBody)
+      await sendEmail(sendEmailRequest)
       setTimeout(() => {
         setSendEmailState(SendEmailState.SENT_STATE)
       }, 1000)
     } catch (err) {
-      console.error('Something went wrong while sending email', err)
       setTimeout(() => {
         setSendEmailState(SendEmailState.ERROR_STATE)
       }, 1000)
@@ -146,7 +150,7 @@ export default function Contact (): JSX.Element {
         <button
           type="submit"
           className="btn"
-          disabled={disableInput(sendEmailState)}
+          // disabled={disableInput(sendEmailState)}
         >
           <span>{sendBtnText(sendEmailState)}</span>
           {buttonIcon(sendEmailState)}
