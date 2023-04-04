@@ -25,7 +25,7 @@ export default function Contact (): JSX.Element {
 
   async function sendEmail (sendEmailRequest: EmailRequest): Promise<void> {
     const response = await fetch(
-      'http://localhost:8080/api/sendMail',
+      'https://portfolio-backend.deno.dev/api/sendMail',
       {
         method: 'POST',
         body: JSON.stringify(sendEmailRequest),
