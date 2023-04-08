@@ -25,7 +25,7 @@ export default function Contact (): JSX.Element {
 
   async function sendEmail (sendEmailRequest: EmailRequest): Promise<void> {
     const response = await fetch(
-      'https://portfolio-backend.deno.dev/api/sendMail',
+      `${import.meta.env.VITE_API_URL}/api/sendMail`,
       {
         method: 'POST',
         body: JSON.stringify(sendEmailRequest),
@@ -150,7 +150,7 @@ export default function Contact (): JSX.Element {
         <button
           type="submit"
           className="btn"
-          // disabled={disableInput(sendEmailState)}
+          disabled={disableInput(sendEmailState)}
         >
           <span>{sendBtnText(sendEmailState)}</span>
           {buttonIcon(sendEmailState)}
