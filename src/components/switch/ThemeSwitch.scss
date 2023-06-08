@@ -7,7 +7,7 @@
   opacity: 0.75;
 
   .corona {
-    --_height: 1.5rem;
+    --_height: var(--p-font-size);
     --_width: 0.25rem;
     position: absolute;
     height: var(--_height);
@@ -34,17 +34,17 @@
       height: calc(var(--_height) / 4);
       width: var(--_width);
       background-color: var(--secondary-color);
-      inset: 0;
-      margin: auto;
       border-radius: var(--_width);
+      transform: translate(-50%, 0);
+      left: 50%;
     }
 
     &::before {
-      top: 1.75rem;
+      top: calc(var(--_height) * 1.15);
     }
 
     &::after {
-      top: -2rem;
+      bottom: calc(var(--_height) * 1.15);
     }
   }
 
