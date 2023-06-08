@@ -24,12 +24,12 @@
         }
 
         to {
-          fill: var(--secondar-color);
+          fill: var(--secondary-color);
         }
       }
 
       path {
-        stroke: var(--secondar-color);
+        stroke: var(--secondary-color);
       }
 
       @for $i from 1 through list.length($stroke-lengths) {

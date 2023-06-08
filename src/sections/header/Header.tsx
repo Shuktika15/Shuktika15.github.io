@@ -2,14 +2,15 @@ import './Header.scss'
 import NavButton from './nav-button/NavButton'
 import { useEffect, useRef, useState } from 'preact/compat'
 import { type JSX } from 'preact'
+import ThemeSwitch from '../../components/switch/ThemeSwitch'
 
 export default function Header (): JSX.Element {
-  interface anchor {
+  interface Anchor {
     title: string
     href: string
   }
 
-  const anchors: anchor[] = [
+  const anchors: Anchor[] = [
     {
       title: 'About Me',
       href: 'AboutMe'
@@ -59,24 +60,27 @@ export default function Header (): JSX.Element {
           <a href="/#Landing">
             <h1>Shuktika<span>.</span></h1>
           </a>
-          <NavButton open={navPopupOpened} onClick={closeNavPopup}/>
-          <nav>
-            {anchors.map((anchor, index) => {
-              return (
-                <a
-                  href={`/#${anchor.href}`}
-                  className="fade-in-slide-in"
-                  style={{ animationDelay: `${animationStarts + (1250 - index * 250)}ms` }}
-                  key={anchor.href}
-                >
-                  <p>{anchor.title}</p>
-                </a>
-              )
-            })}
-          </nav>
+          <div class="nav">
+            <NavButton open={navPopupOpened} onClick={closeNavPopup}/>
+            <nav>
+              {anchors.map((anchor, index) => {
+                return (
+                  <a
+                    href={`/#${anchor.href}`}
+                    className="fade-in-slide-in"
+                    style={{ animationDelay: `${animationStarts + (1250 - index * 250)}ms` }}
+                    key={anchor.href}
+                  >
+                    <p>{anchor.title}</p>
+                  </a>
+                )
+              })}
+            </nav>
+            <ThemeSwitch/>
+          </div>
         </div>
       </header>
-      {<div className="container nav-popup transition" ref={navPopup}>
+      <div className="container nav-popup transition" ref={navPopup}>
         <nav>
           {anchors.map((anchor, index) => {
             return (
@@ -89,7 +93,7 @@ export default function Header (): JSX.Element {
             )
           })}
         </nav>
-      </div>}
+      </div>
     </div>
   )
 }

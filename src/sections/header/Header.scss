@@ -41,8 +41,14 @@
       justify-content: space-between;
       align-items: center;
 
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
       h1 {
-        color: var(--secondar-color);
+        color: var(--secondary-color);
         font-family: 'Mulish', sans-serif;
         flex: 1;
 
@@ -91,7 +97,7 @@
 
         hr {
           border-bottom: none;
-          border-top: 1px solid rgba(var(--dark-color), 0.2);;
+          border-top: 1px solid rgba(var(--dark-color), 0.2);
         }
       }
     }
