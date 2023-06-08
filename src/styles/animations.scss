@@ -1,3 +1,7 @@
+* {
+  transition: background-color var(--fast-transition);
+}
+
 .fade-in {
   opacity: 0;
   animation: fade-in 1s ease-in forwards;

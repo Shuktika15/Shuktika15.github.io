@@ -61,7 +61,6 @@ export default function Header (): JSX.Element {
             <h1>Shuktika<span>.</span></h1>
           </a>
           <div class="nav">
-            <NavButton open={navPopupOpened} onClick={closeNavPopup}/>
             <nav>
               {anchors.map((anchor, index) => {
                 return (
@@ -77,6 +76,7 @@ export default function Header (): JSX.Element {
               })}
             </nav>
             <ThemeSwitch/>
+            <NavButton open={navPopupOpened} onClick={closeNavPopup}/>
           </div>
         </div>
       </header>
