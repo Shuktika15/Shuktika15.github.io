@@ -7,8 +7,14 @@ export default function ThemeSwitch (): JSX.Element {
   }
 
   return (
-    <div id="ThemeSwitch">
-      <button onClick={changeTheme}>Switch</button>
-    </div>
+    <button id="ThemeSwitch" onClick={changeTheme}>
+      <div className="sun">
+        <div className="hole"></div>
+      </div>
+      <div className="corona"></div>
+      <div className="corona"></div>
+      <div className="corona"></div>
+      <div className="corona"></div>
+    </button>
   )
 }

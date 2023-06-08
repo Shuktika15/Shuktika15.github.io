@@ -183,6 +183,16 @@ textarea {
   }
 }
 
+button {
+  border: none;
+  outline: none;
+}
+
+button:focus, button:active {
+  border: none;
+  outline: none;
+}
+
 @mixin tooltip-position($position: bottom) {
   &::before {
     inset: initial;

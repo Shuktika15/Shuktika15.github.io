@@ -1,0 +1,84 @@
+#ThemeSwitch {
+  border: none;
+  position: relative;
+  height: var(--h1-font-size);
+  width: var(--h1-font-size);
+  transform: scale(0.8);
+
+  .corona {
+    --_height: 1.5rem;
+    --_width: 0.25rem;
+    position: absolute;
+    height: var(--_height);
+    width: var(--_width);
+    inset: 0;
+    margin: auto;
+    scale: 0;
+
+    &:nth-child(2) {
+      transform: rotate(45deg);
+    }
+
+    &:nth-child(3) {
+      transform: rotate(90deg);
+    }
+
+    &:nth-child(4) {
+      transform: rotate(135deg);
+    }
+
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      height: calc(var(--_height) / 4);
+      width: var(--_width);
+      background-color: var(--secondary-color);
+      inset: 0;
+      margin: auto;
+      border-radius: var(--_width);
+    }
+
+    &::before {
+      top: 1.75rem;
+    }
+
+    &::after {
+      top: -2rem;
+    }
+  }
+
+  .sun {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    height: var(--p-font-size);
+    aspect-ratio: 1;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    transform: scale(1.5);
+
+    .hole {
+      position: absolute;
+      height: var(--p-font-size);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background-color: var(--primary-color);
+      top: calc(var(--p-font-size) * -1 / 4);
+      left: calc(var(--p-font-size) * -1 / 2);
+    }
+  }
+}
+
+.dark-theme #ThemeSwitch {
+  .corona {
+    scale: 1;
+  }
+
+  .sun {
+    transform: scale(1);
+
+    .hole {
+      transform: scale(0);
+    }
+  }
+}
