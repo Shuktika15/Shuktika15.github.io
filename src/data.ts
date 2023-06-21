@@ -123,7 +123,7 @@ export const Data: DataType = {
         }, {
             id: 2,
             institution: "B.D.M. International",
-            educationType: "CBSE 12th Board Exam",
+            educationType: "CBSE 12th standard Board Exam",
             gradeType: "percentage",
             grade: 89,
             startYear: 2014,
@@ -131,7 +131,7 @@ export const Data: DataType = {
         }, {
             id: 3,
             institution: "B.D.M. International",
-            educationType: "CBSE 10th Board Exam",
+            educationType: "CBSE 10th standard Board Exam",
             gradeType: "cgpa",
             grade: 10,
             startYear: 2012,
