@@ -87,9 +87,9 @@ export default function Hobbies (): JSX.Element {
       <article className="hobby">
         <h3 className="color-accent">CSS Art</h3>
         <p className="content">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci aliquam cumque, error esse
-          eveniet, facilis fugiat harum illum incidunt laboriosam minus modi molestias natus nihil non optio
-          perferendis quae qui quia quibusdam, quo quod recusandae repudiandae sed sint temporibus.
+          My passion lies in creating captivating CSS art. Through meticulous coding, I bring static designs to life,
+          crafting visually stunning masterpieces that push the boundaries of what's possible with cascading style sheets.
+          Each artwork in my portfolio represents a harmonious blend of creativity, technical skill, and artistic expression.
         </p>
         <div className="collage css-arts">
           {cssArts.map(el =>
@@ -106,9 +106,10 @@ export default function Hobbies (): JSX.Element {
             <article className="hobby">
                 <h3 className="color-accent">Digital Painting</h3>
                 <p className="content">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A adipisci aliquam cumque, error esse
-                    eveniet, facilis fugiat harum illum incidunt laboriosam minus modi molestias natus nihil non optio
-                    perferendis quae qui quia quibusdam, quo quod recusandae repudiandae sed sint temporibus.
+                  I have crafted these digital paintings using the powerful canvas of ibisPaint X application.
+                  With its versatile tools and brushes it has enhanced my artistic visions, blending colors and textures
+                  with precision. Each painting in my collection serves as a proof of the limitless possibilities of
+                  digital art, highlighting my passion for creativity.
                 </p>
                 <div className="collage digital-paintings">
                     {digitalPaintings.map(el =>
