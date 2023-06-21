@@ -90,10 +90,10 @@ export const Data: DataType = {
             startYear: 2023,
             current: true,
             descriptions: [
-                `Worked in Node.js, Express.js and still learning 
-                Working on implementing a better grid system to replace 
-                the old one, which can drastically improve the performance 
-                and add a whole set of new features.`
+                `Worked in Node.js, Express.js and still learning and 
+                improving on them. Working on implementing a better grid 
+                system to replace the old one, which can drastically 
+                improve the performance and add a whole set of new features.`
             ]
         }, {
             id: 2,
@@ -107,7 +107,7 @@ export const Data: DataType = {
                 `Worked on multiple insurance based client projects in
                 upgrade team and development team.
                 Increased efficiency by 90% by automating the process of
-                finding upgrade files`
+                finding upgrade files.`
             ]
         }
     ],
