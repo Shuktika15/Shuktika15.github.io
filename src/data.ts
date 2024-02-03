@@ -117,7 +117,7 @@ export const Data: DataType = {
     educations: [
         {
             id: 1,
-            institution: "Government College of Leather Technology",
+            institution: "Government College of Engineering & Leather Technology",
             educationType: "B. Tech in Information Technology",
             gradeType: "cgpa",
             grade: 8.34,
