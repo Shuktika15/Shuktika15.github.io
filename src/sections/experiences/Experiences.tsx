@@ -17,7 +17,7 @@ export default function Experiences (): JSX.Element {
       <h1>Experiences</h1>
       {experiences.map((experience, index) => (
         <article className="experience" key={experience.id}>
-          <h3>{experience.company}</h3>
+          <h3>{experience.company} [{experience.designation}]</h3>
           <p className="timeline">
             <DateRageIcon/>
             <span>{timeline(experience)}</span>
