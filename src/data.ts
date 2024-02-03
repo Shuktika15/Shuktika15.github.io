@@ -20,6 +20,7 @@ export type Month = 'Jan' | 'Feb' | 'Mar' | 'Apr' | 'May' | 'Jun' | 'Jul' | 'Aug
 export interface Experience {
     id: number,
     company: string,
+    designation: string,
     startYear: number,
     startMonth: Month,
     current: boolean,
@@ -85,7 +86,8 @@ export const Data: DataType = {
     experiences: [
         {
             id: 1,
-            company: 'Applied Reserach Works',
+            company: 'Applied Research Works',
+            designation: 'SDE II',
             startMonth: 'Feb',
             startYear: 2023,
             current: true,
@@ -98,6 +100,7 @@ export const Data: DataType = {
         }, {
             id: 2,
             company: 'Cognizant',
+            designation: 'Programmer Analyst',
             startMonth: 'Oct',
             startYear: 2020,
             current: false,
