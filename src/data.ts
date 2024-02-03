@@ -88,7 +88,7 @@ export const Data: DataType = {
             id: 1,
             company: 'Applied Research Works',
             designation: 'SDE II',
-            startMonth: 'Feb',
+            startMonth: 'Jan',
             startYear: 2023,
             current: true,
             descriptions: [
@@ -104,7 +104,7 @@ export const Data: DataType = {
             startMonth: 'Oct',
             startYear: 2020,
             current: false,
-            endMonth: 'Feb',
+            endMonth: 'Jan',
             endYear: 2023,
             descriptions: [
                 `Worked on multiple insurance based client projects in
